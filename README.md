@@ -24,3 +24,7 @@ This repository collects the training material for the VSC course about using R 
   + inter-node MPI communication latency: is it too bad?
   + implicit parallelisation (using propoer libraries like OpenBLAS/MKL in a correct way) with eye on scaling
   + focus on parallel efficiency (instead of speedup)
+
+As a general flow of the session, we can perhaps start with an example. Then, we profile it, and then see where things can be improved. With that way, the two major topics above would be covered along the way.
+
+Another possibility is using a part of Mariana's PhD work: https://montesmariana.github.io/semcloud/articles/processClouds.html.
