@@ -10,10 +10,9 @@
 #' @return complex number matrix
 #' @export
 compute_Z <- function(width, height) {
-    x <- seq(-1.8, 1.8, length.out=width)
-    y <- seq(-1.8, 1.8, length.out=height)
-    Z <- outer(x, 1.0i*y, "+")
-    return(Z)
+    x <- seq(-2.0, 2.0, length.out=width)
+    y <- seq(-2.0, 2.0, length.out=height)
+    return(outer(x, 1i*y, "+"))
 }
 
 #' Function to compute the Julia set
