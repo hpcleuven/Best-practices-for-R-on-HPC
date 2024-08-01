@@ -1,4 +1,4 @@
-#!/usr/bin/env -S Rscript
+#!/usr/bin/env -S Rscript --no-save --no-restore
 
 # This is a script that will compute the Julia set for a
 # given:
