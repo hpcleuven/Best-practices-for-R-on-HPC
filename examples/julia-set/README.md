@@ -18,5 +18,7 @@ into smaller regions.
 1. `julia_utils.R`: R functions to handle command line arguments.
 1. `julia_serial.R`: R functions that generate the Julia set
    for a given complex number `c` using a serial algorithm.
+1. `julia_preparallel.R`: R functions that generate the Julia set
+   but are easier to parallelize.
 1. `julia.R`: R script that generates the Julia set for a given
    complex number `c` using a given implementation.
