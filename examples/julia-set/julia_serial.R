@@ -25,8 +25,8 @@ compute_Z <- function(width, height) {
 #' @export
 compute_julia_set <- function(Z, iterations, threshold, c) {
     image <- matrix(0, nrow=nrow(Z), ncol=ncol(Z))
-    for (i in 1:iterations) {
-        image <- image + (abs(Z) <= threshold)*i
+    for (iteration in 1:iterations) {
+        image <- image + (abs(Z) <= threshold)
         Z <- Z^2 + c
     }
     return(image)
