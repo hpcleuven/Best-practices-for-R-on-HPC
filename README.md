@@ -4,6 +4,7 @@ This repository collects the training material for the VSC course about using R
 on HPC facilities.
 
 
+<<<<<<< HEAD
 ## What is it?
 
 1. `examples`: R code examples for the course.
