@@ -23,3 +23,5 @@ The problem can be parallelized by dividing the image into smaller regions.
    using two loops to iterate over the points, in column major access pattern.
 1. `julia.R`: R script that generates the Julia set for a given complex number
    `c` using a given implementation.
+1. `check.sh`: bash script that checks the output of the different
+  implementations.
