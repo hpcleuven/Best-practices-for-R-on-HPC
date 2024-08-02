@@ -25,3 +25,7 @@ The problem can be parallelized by dividing the image into smaller regions.
    `c` using a given implementation.
 1. `check.sh`: bash script that checks the output of the different
   implementations.
+1. `clear_cache.ccp`: C++ program that clears the cache by allocating a large
+   array and write/read it.
+1. `benchmark.sh`: bash script that benchmarks the different implementations using
+   `hyperfine`.
