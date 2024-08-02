@@ -33,3 +33,5 @@ The problem can be parallelized by dividing the image into smaller regions.
    array and write/read it.
 1. `benchmark.sh`: bash script that benchmarks the different implementations using
    `hyperfine`.
+1. `parallel_complex_consts.R`: R script that generates the Julia set for a
+   a series of complex numbers using the `foreach` package over the constats.
