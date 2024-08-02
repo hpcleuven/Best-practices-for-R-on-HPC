@@ -21,6 +21,10 @@ The problem can be parallelized by dividing the image into smaller regions.
    loops to iterate over the points.
 1. `julia_double_loops_column_major.R`: R functions that generate the Julia set
    using two loops to iterate over the points, in column major access pattern.
+1. `julia_foreach.R`: R functions that generate the Julia set using the `foreach`
+   package over the outer loop.
+1. `julia_foreach_parallel.R`: R functions that generate the Julia set using the
+   `foreach` package over the outer loop in parallel.
 1. `julia.R`: R script that generates the Julia set for a given complex number
    `c` using a given implementation.
 1. `check.sh`: bash script that checks the output of the different

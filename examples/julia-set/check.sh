@@ -4,7 +4,7 @@
 N=50
 
 # all implementations
-all_implementations="serial double_loops double_loops_column_major single_loops"
+all_implementations="serial double_loops double_loops_column_major single_loops foreach foreach_parallel"
 
 # gold-standard implementation
 golden_implementation="serial"
@@ -12,7 +12,15 @@ golden_implementation="serial"
 # Run the implementations
 for implementation in $all_implementations; do
     echo "Running $implementation"
-    ./julia.R --width $N --height $N --implementation "julia_${implementation}.R" 2> "${implementation}.txt"
+    # if implementation name contains "parallel", run with --parallel flag and --nr_cores=2
+    if [[ $implementation == *parallel* ]]; then
+        ./julia.R --width $N --height $N --implementation "julia_${implementation}.R" \
+            --parallel --nr_cores=2 \
+            2> "${implementation}.txt"
+    else
+        ./julia.R --width $N --height $N --implementation "julia_${implementation}.R" \
+            2> "${implementation}.txt"
+    fi
 done
 
 # Compare the implementations

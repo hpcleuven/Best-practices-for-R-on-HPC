@@ -16,6 +16,8 @@
 #     "Rprof.out" file, summary is printed to standard output
 #   - interval duration of the profiling interval, default is 0.02
 #   - implementation file to source, default is "julia_serial.R"
+#   - parallel whether to run the script in parallel, default is FALSE
+#   - nr_cores number of cores to use, default is 2
 #
 # These values are passed as command line arguments, e.g.,
 #  Rscript julia.R --real -0.8 --imag 0.156 --width 800 --height 800 \
@@ -38,6 +40,11 @@ source("julia_utils.R")
 
 # handle command line arguments
 opt <- argument_parser()
+
+# set up parallel backend if required
+if (opt$parallel) {
+    setup_parallel_backend(opt$nr_cores)
+}
 
 # source the implementation file
 source(opt$implementation)

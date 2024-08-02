@@ -4,7 +4,9 @@
 N=200
 
 # implementations to compare
-all_implementations="serial double_loops double_loops_column_major single_loops"
+all_implementations="serial double_loops double_loops_column_major foreach"
+
+# single_loops has been left out since it is very slow
 
 # prepare command
 prepare_cmd="./clear_cache"

@@ -4,6 +4,7 @@
 #'
 
 # Load the necessary libraries
+library(doParallel)
 library(optparse)
 
 #' Function to parse command line arguments
@@ -33,9 +34,22 @@ argument_parser <- function() {
         make_option(c("--interval"), type="double", default=0.02,
                     help="Duration of the profiling interval (s)"),
         make_option(c("--implementation"), type="character", default="julia_serial.R",
-                    help="Julia set implementation file to source")
+                    help="Julia set implementation file to source"),
+        make_option(c("--parallel"), action="store_true", default=FALSE,
+                    help="Run the computation in parallel"),
+        make_option(c("--nr_cores"), type="integer", default=2,
+                    help="Number of cores to use")
     )
     opt_parser <- OptionParser(option_list=option_list)
     opt <- parse_args(opt_parser)
     return(opt)
 }
+
+#' Function to set up parallel backend
+#'
+#' @param num_cores Number of cores to use
+#' @export
+setup_parallel_backend <- function(num_cores) {
+    registerDoParallel(cores=num_cores)
+}
+
