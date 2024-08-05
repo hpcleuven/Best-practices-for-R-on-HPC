@@ -17,3 +17,7 @@ Example code used in this training.
 * microbenchmark R package to benchmark code
 * foreach R package to parallelize code
 * doParallel R package to parallelize code
+
+For some benchmark jobs
+
+* [hyperfine](https://github.com/sharkdp/hyperfine)
