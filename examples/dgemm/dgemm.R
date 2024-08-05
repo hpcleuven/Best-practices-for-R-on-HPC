@@ -69,16 +69,16 @@ compute_matrix <- function(size, power) {
 
 # Perform the computation for multiple matrices, in parallel if specified,
 # and store the results in a list
-if (opt$nr_cores > 1) {
+results <- if (opt$nr_cores > 1) {
     foreach(i=1:opt$nr_matrices, .combine='rbind') %dopar% {
-        cat("Computing matrix ", i, " at ", Sys.time(), "\n")
+#        cat("Computing matrix ", i, " at ", Sys.time(), "\n")
         compute_matrix(opt$matrix_size, opt$power)
     }
 } else {
     foreach(i=1:opt$nr_matrices, .combine='rbind') %do% {
         compute_matrix(opt$matrix_size, opt$power)
     }
-} -> results
+}
 
 # Print the results as a table
 results_df <- as.data.frame(results)
