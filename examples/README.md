@@ -14,3 +14,5 @@ Example code used in this training.
 * R 4.x
 * optargs R package to handle command line arguments
 * microbenchmark R package to benchmark code
+* foreach R package to parallelize code
+* doParallel R package to parallelize code
