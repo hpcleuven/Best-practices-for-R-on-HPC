@@ -5,6 +5,7 @@ Example code used in this training.
 
 ## What is it?
 
+1. `dgemm`: matrix-matrix multiplication using a BLAS library.
 1. `julia-set`: Julia set computation parallelized using serveral
    parallelization packages.    
 
