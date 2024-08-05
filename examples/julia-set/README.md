@@ -35,3 +35,8 @@ The problem can be parallelized by dividing the image into smaller regions.
    `hyperfine`.
 1. `parallel_complex_consts.R`: R script that generates the Julia set for a
    a series of complex numbers using the `foreach` package over the constats.
+   Illustrates embarassingly parallel problems.
+1. `parallel_sizes.R`: R script that generates the Julia set for a series of
+   sizes of the image using the `foreach` package over the outer loop.  Illustrates
+   load balancing issues.
+
