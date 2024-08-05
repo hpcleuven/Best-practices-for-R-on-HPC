@@ -20,6 +20,6 @@ using BLAS, which is parallelized using OpenMP. This script uses a parallel
    `OMP_NUM_THREADS=2` and `--nr_cores 2`.
 1. `parallel_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=72`,
    `OMP_NUM_THREADS` unspecified and `--nr_cores` varying from 1 to 72.
-1. `parallel_omp_num_threads.slurm`: runs `dgemm.R` using `hyperfine` with
+1. `parallel_omp_num_threads_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with
    `cpus_per_task=72`, `OMP_NUM_THREADS` set such that when `--nr_cores`
    varies from 1 to 72, all the cores are used.
