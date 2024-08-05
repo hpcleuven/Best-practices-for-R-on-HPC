@@ -10,3 +10,16 @@ using BLAS, which is parallelized using OpenMP. This script uses a parallel
 
 1. `dgemm.R`: script that performs multiple matrix multiplications using R's
    `foreach` package.
+1. `single_core.slurm`: runs `dgemm.R` with `cpus_per_task=1` and `--nr_cores
+   1`.
+1. `multicore.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
+   `OMP_NUM_THREADS=4` and `--nr_cores 1`.
+1. `parallel_single_core.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
+   `OMP_NUM_THREADS=1` and `--nr_cores 4`.
+1. `parallel_multicore.slurm`: runs 'dgemm.R` with `cpus_per_task=4`,
+   `OMP_NUM_THREADS=2` and `--nr_cores 2`.
+1. `parallel.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=72`,
+   `OMP_NUM_THREADS` unspecified and `--nr_cores` varying from 1 to 72.
+1. `parallel_omp_num_threads.slurm`: runs `dgemm.R` using `hyperfine` with
+   `cpus_per_task=72`, `OMP_NUM_THREADS` set such that when `--nr_cores`
+   varies from 1 to 72, all the cores are used.

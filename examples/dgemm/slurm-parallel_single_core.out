@@ -1,0 +1,31 @@
+SLURM_JOB_ID: 62135535
+SLURM_JOB_USER: vsc30140
+SLURM_JOB_ACCOUNT: lpt2_sysadmin
+SLURM_JOB_NAME: parallel_single_core.slurm
+SLURM_CLUSTER_NAME: wice
+SLURM_JOB_PARTITION: batch_sapphirerapids
+SLURM_NNODES: 1
+SLURM_NODELIST: q16c03n1
+SLURM_JOB_CPUS_PER_NODE: 4
+Date: Mon Aug  5 15:14:01 CEST 2024
+Walltime: 00-00:05:00
+========================================================================
++ OMP_NUM_THREADS=1
++ ./dgemm.R --size 2000 --power 50 --nr_cores 4
+Loading required package: iterators
+Loading required package: parallel
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.950167e+81         3.515612e+81
+result.2         -2.405890e+81         3.102088e+81
+result.3         -2.479630e+81         2.957486e+81
+result.4         -2.506001e+81         2.266216e+81
+result.5         -2.157773e+81         2.793254e+81
+result.6         -2.636555e+81         3.008617e+81
+result.7         -2.299310e+81         2.354574e+81
+result.8         -3.283858e+81         2.903949e+81
+result.9         -2.312119e+81         2.158332e+81
+result.10        -2.141588e+81         2.345974e+81
+
+real	0m30.632s
+user	1m40.544s
+sys	0m1.082s

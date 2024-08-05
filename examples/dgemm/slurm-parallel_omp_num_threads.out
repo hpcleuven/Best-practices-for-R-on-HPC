@@ -1,0 +1,66 @@
+Benchmark 1: OMP_NUM_THREADS=72 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 1
+  Time (mean ± σ):     31.123 s ±  0.256 s    [User: 724.905 s, System: 204.451 s]
+  Range (min … max):   30.939 s … 31.416 s    3 runs
+ 
+Benchmark 2: OMP_NUM_THREADS=36 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 2
+  Time (mean ± σ):     17.283 s ±  1.156 s    [User: 413.586 s, System: 89.740 s]
+  Range (min … max):   15.996 s … 18.233 s    3 runs
+ 
+Benchmark 3: OMP_NUM_THREADS=18 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 4
+  Time (mean ± σ):      9.490 s ±  0.152 s    [User: 254.922 s, System: 39.183 s]
+  Range (min … max):    9.349 s …  9.652 s    3 runs
+ 
+Benchmark 4: OMP_NUM_THREADS=9 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 8
+  Time (mean ± σ):      6.810 s ±  0.022 s    [User: 219.111 s, System: 31.553 s]
+  Range (min … max):    6.787 s …  6.830 s    3 runs
+ 
+Benchmark 5: OMP_NUM_THREADS=6 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 12
+  Time (mean ± σ):      6.154 s ±  0.069 s    [User: 222.648 s, System: 25.287 s]
+  Range (min … max):    6.089 s …  6.227 s    3 runs
+ 
+Benchmark 6: OMP_NUM_THREADS=4 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 16
+  Time (mean ± σ):      5.558 s ±  0.174 s    [User: 195.152 s, System: 20.923 s]
+  Range (min … max):    5.360 s …  5.686 s    3 runs
+ 
+Benchmark 7: OMP_NUM_THREADS=3 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 24
+  Time (mean ± σ):      4.930 s ±  0.248 s    [User: 203.709 s, System: 18.884 s]
+  Range (min … max):    4.667 s …  5.160 s    3 runs
+ 
+Benchmark 8: OMP_NUM_THREADS=2 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 32
+  Time (mean ± σ):      5.574 s ±  0.086 s    [User: 207.765 s, System: 21.895 s]
+  Range (min … max):    5.486 s …  5.657 s    3 runs
+ 
+Benchmark 9: OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 40
+  Time (mean ± σ):      4.621 s ±  0.086 s    [User: 133.204 s, System: 3.665 s]
+  Range (min … max):    4.538 s …  4.711 s    3 runs
+ 
+Benchmark 10: OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 48
+  Time (mean ± σ):      4.104 s ±  0.222 s    [User: 150.761 s, System: 4.520 s]
+  Range (min … max):    3.853 s …  4.276 s    3 runs
+ 
+Benchmark 11: OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 56
+  Time (mean ± σ):      3.993 s ±  0.094 s    [User: 154.852 s, System: 5.176 s]
+  Range (min … max):    3.886 s …  4.065 s    3 runs
+ 
+Benchmark 12: OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 64
+  Time (mean ± σ):      3.850 s ±  0.040 s    [User: 169.703 s, System: 5.767 s]
+  Range (min … max):    3.824 s …  3.896 s    3 runs
+ 
+Benchmark 13: OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 72
+  Time (mean ± σ):      3.297 s ±  0.005 s    [User: 190.309 s, System: 6.664 s]
+  Range (min … max):    3.292 s …  3.302 s    3 runs
+ 
+Summary
+  OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 72 ran
+    1.17 ± 0.01 times faster than OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 64
+    1.21 ± 0.03 times faster than OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 56
+    1.24 ± 0.07 times faster than OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 48
+    1.40 ± 0.03 times faster than OMP_NUM_THREADS=1 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 40
+    1.50 ± 0.08 times faster than OMP_NUM_THREADS=3 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 24
+    1.69 ± 0.05 times faster than OMP_NUM_THREADS=4 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 16
+    1.69 ± 0.03 times faster than OMP_NUM_THREADS=2 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 32
+    1.87 ± 0.02 times faster than OMP_NUM_THREADS=6 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 12
+    2.07 ± 0.01 times faster than OMP_NUM_THREADS=9 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 8
+    2.88 ± 0.05 times faster than OMP_NUM_THREADS=18 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 4
+    5.24 ± 0.35 times faster than OMP_NUM_THREADS=36 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 2
+    9.44 ± 0.08 times faster than OMP_NUM_THREADS=72 ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 1
