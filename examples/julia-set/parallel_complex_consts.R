@@ -5,7 +5,7 @@
 # file with a unique name.  The size of the images is identical.
 #
 # Command line arguments:
-#   --nr_constants_<int>  Number of images to generate
+#   --nr_constants_<int>  Number of complex constants to generate
 #   --width <int>  Width of the image
 #   --height <int>  Height of the image
 #   --iterations <int>  Maximum number of iterations
@@ -21,7 +21,7 @@ library(optparse)
 # Parse command line arguments
 option_list <- list(
   make_option("--nr_constants", type="integer", default=10,
-              help="Number of images to generate"),
+              help="Number of complex constants to generate"),
   make_option("--width", type="integer", default=200,
               help="Width of the image"),
   make_option("--height", type="integer", default=200,
@@ -56,7 +56,7 @@ if (!dir.exists(opt$output_dir)) {
 
 # Generate the images
 foreach(i=1:opt$nr_constants) %dopar% {
-    filename <- sprintf("%s/julia_%03d.png", opt$output_dir, i)
+    filename <- sprintf("%s/julia_%03d.txt", opt$output_dir, i)
     image <- compute_image(opt$width, opt$height, opt$iterations, opt$threshold, constants[i])
     write.table(image, file=filename, row.names=FALSE, col.names=FALSE)
 } |> invisible()
