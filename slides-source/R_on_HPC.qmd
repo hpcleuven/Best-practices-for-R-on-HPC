@@ -98,7 +98,6 @@ How?
 #SBATCH --time=00:02:00                       # <6>
 #SBATCH --cluster=wice                        # <7>
 
-# first clean up your environment, then load R
 module purge &> /dev/null                     # <8>
 module load R/4.4.0-gfbf-2023a                # <9>
 
@@ -151,21 +150,24 @@ Submitted batch job 62136541 on cluster wice     # <2>
 
 Show all your jobs on cluster wice:
 
+::: {.small}
 ```bash
 $ squeue --cluster=wice
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           62136541      wice hello_wo  mmontes  R       0:00      1 p33c20n3
 ```
+:::
 
 ::: {.fragment}
 `ST` is the job state:
+
 - `PD`: pending
 - `R`: running
 - `CG`: completing
 :::
 
 ::: {.fragment}
-No jobs? All done!
+No jobs shown? All done!
 :::
 
 
@@ -191,3 +193,59 @@ Hello from p33c20n3 !                              # <2>
 
 1. Info about job
 2. Output of the script
+
+
+## Runtime parameters
+
+Scenario: run R script with different parameters
+
+```bash
+$ Rscript hello_world_cla.R  --name "Alice"
+Hello from Alice !
+$ Rscript hello_world_cla.R  --name "Bob"  --count 3
+Hello from Bob !
+Hello from Bob !
+Hello from Bob !
+```
+
+
+## `optparse` package
+
+```{.r filename="hello_world_cla.R"}
+library(optparse)                                              # <1>
+
+# Define the options
+option_list <- list(                                           # <2>
+  make_option(c("--name"), type="character", default="World",  # <3>
+              help="Name to greet"),
+  make_option(c("--count"), type="integer", default=1,         # <4>
+              help="Number of times to greet")
+)
+opt <- parse_args(OptionParser(option_list=option_list))        # <5>
+
+for (i in 1:opt$count) {                                       # <6>
+  cat("Hello from", opt$name, "!\n")
+}
+```
+
+1. Load the `optparse` package
+2. Define the options
+3. Option for the name
+4. Option for the count
+5. Parse the arguments
+6. Use the arguments in list `opt`
+
+
+## Job script with parameters
+
+```{.bash filename="hello_world_cla.slurm"}
+#!/usr/bin/env -S bash -l
+#SBATCH --account=lpt2_sysadmin
+#SBATCH --time=00:02:00
+#SBATCH --cluster=wice
+
+module purge &> /dev/null
+module load R/4.4.0-gfbf-2023a
+
+Rscript ./hello_world_cla.R  --name "Bob"  --count 3
+```
