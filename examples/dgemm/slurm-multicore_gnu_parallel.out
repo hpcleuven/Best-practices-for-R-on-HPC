@@ -1,14 +1,14 @@
-SLURM_JOB_ID: 62137480
+SLURM_JOB_ID: 62137757
 SLURM_JOB_USER: vsc30140
 SLURM_JOB_ACCOUNT: lpt2_sysadmin
 SLURM_JOB_NAME: multicore_gnu_parallel.slurm
 SLURM_CLUSTER_NAME: wice
 SLURM_JOB_PARTITION: batch_sapphirerapids
 SLURM_NNODES: 1
-SLURM_NODELIST: q16c13n2
+SLURM_NODELIST: q16c17n4
 SLURM_JOB_CPUS_PER_NODE: 72
-Date: Tue Aug  6 15:04:48 CEST 2024
-Walltime: 00-00:30:00
+Date: Tue Aug  6 16:05:38 CEST 2024
+Walltime: 00-01:00:00
 ========================================================================
 Running with 1 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -23,9 +23,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m42.668s
-user	1m21.695s
-sys	0m0.703s
+real	0m44.389s
+user	1m21.946s
+sys	0m0.827s
 -----------------------------------
 Running with 2 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -51,9 +51,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m43.011s
-user	2m43.896s
-sys	0m1.585s
+real	0m42.985s
+user	2m43.600s
+sys	0m1.518s
 -----------------------------------
 Running with 3 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -90,9 +90,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m51.351s
-user	4m21.317s
-sys	0m5.227s
+real	0m55.379s
+user	4m27.512s
+sys	0m5.503s
 -----------------------------------
 Running with 4 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -140,9 +140,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m43.663s
-user	5m29.947s
-sys	0m3.335s
+real	0m46.939s
+user	5m41.086s
+sys	0m5.045s
 -----------------------------------
 Running with 5 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -201,9 +201,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m54.662s
-user	7m17.322s
-sys	0m9.737s
+real	0m53.575s
+user	7m8.874s
+sys	0m8.405s
 -----------------------------------
 Running with 6 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -273,9 +273,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m54.063s
-user	8m46.628s
-sys	0m12.877s
+real	0m44.754s
+user	8m18.849s
+sys	0m5.328s
 -----------------------------------
 Running with 7 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -356,9 +356,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m50.452s
-user	10m13.087s
-sys	0m15.750s
+real	0m48.442s
+user	10m4.111s
+sys	0m12.498s
 -----------------------------------
 Running with 8 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -450,9 +450,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m49.596s
-user	11m22.424s
-sys	0m11.834s
+real	0m47.766s
+user	11m18.905s
+sys	0m10.477s
 -----------------------------------
 Running with 9 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -555,9 +555,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m1.674s
-user	13m6.183s
-sys	0m14.093s
+real	1m1.206s
+user	13m16.193s
+sys	0m18.449s
 -----------------------------------
 Running with 10 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -671,9 +671,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m53.904s
-user	14m56.421s
-sys	0m28.099s
+real	0m49.687s
+user	14m19.240s
+sys	0m16.264s
 -----------------------------------
 Running with 11 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -798,9 +798,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m1.649s
-user	16m21.659s
-sys	0m25.801s
+real	0m55.539s
+user	16m3.693s
+sys	0m23.167s
 -----------------------------------
 Running with 12 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -936,9 +936,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m4.539s
-user	17m56.880s
-sys	0m28.799s
+real	1m0.238s
+user	18m31.131s
+sys	0m41.746s
 -----------------------------------
 Running with 13 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -1085,9 +1085,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m5.335s
-user	20m8.956s
-sys	0m38.084s
+real	0m55.465s
+user	19m20.375s
+sys	0m30.844s
 -----------------------------------
 Running with 14 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -1245,9 +1245,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m54.792s
-user	21m3.266s
-sys	0m27.124s
+real	1m1.751s
+user	22m2.792s
+sys	0m55.990s
 -----------------------------------
 Running with 15 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -1416,9 +1416,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m59.740s
-user	23m58.211s
-sys	0m44.719s
+real	0m59.308s
+user	23m0.937s
+sys	0m48.126s
 -----------------------------------
 Running with 16 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -1598,9 +1598,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	0m55.790s
-user	25m25.779s
-sys	0m39.783s
+real	1m2.834s
+user	24m55.061s
+sys	0m51.068s
 -----------------------------------
 Running with 17 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -1791,9 +1791,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m11.956s
-user	28m34.698s
-sys	0m59.894s
+real	0m57.226s
+user	26m11.152s
+sys	0m47.271s
 -----------------------------------
 Running with 18 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -1995,9 +1995,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m4.151s
-user	30m44.447s
-sys	1m3.496s
+real	0m55.284s
+user	28m4.614s
+sys	0m52.301s
 -----------------------------------
 Running with 19 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -2210,9 +2210,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m5.319s
-user	32m42.967s
-sys	0m58.193s
+real	1m4.625s
+user	31m17.261s
+sys	1m14.016s
 -----------------------------------
 Running with 20 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -2436,9 +2436,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m5.716s
-user	35m23.844s
-sys	1m10.442s
+real	1m2.141s
+user	32m41.486s
+sys	1m0.501s
 -----------------------------------
 Running with 21 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -2673,9 +2673,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m6.729s
-user	38m11.537s
-sys	1m23.578s
+real	1m3.885s
+user	35m1.504s
+sys	1m6.746s
 -----------------------------------
 Running with 22 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -2921,9 +2921,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m9.178s
-user	40m8.626s
-sys	1m12.093s
+real	1m7.115s
+user	37m50.205s
+sys	1m28.770s
 -----------------------------------
 Running with 23 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -3180,9 +3180,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m9.635s
-user	43m24.034s
-sys	1m26.825s
+real	1m10.038s
+user	40m39.969s
+sys	1m41.306s
 -----------------------------------
 Running with 24 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -3450,9 +3450,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m14.472s
-user	46m33.881s
-sys	1m32.704s
+real	1m13.584s
+user	43m3.683s
+sys	1m47.035s
 -----------------------------------
 Running with 25 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -3731,9 +3731,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m15.703s
-user	49m34.814s
-sys	1m40.744s
+real	1m12.882s
+user	46m0.836s
+sys	1m56.546s
 -----------------------------------
 Running with 26 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -4023,9 +4023,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m21.648s
-user	54m32.533s
-sys	2m19.721s
+real	1m13.767s
+user	48m40.811s
+sys	2m6.753s
 -----------------------------------
 Running with 27 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -4326,9 +4326,9 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m22.407s
-user	55m15.664s
-sys	2m24.449s
+real	1m10.476s
+user	50m45.267s
+sys	2m25.638s
 -----------------------------------
 Running with 28 parallel work items
           Min Diagonal Element Max Diagonal Element
@@ -4640,9 +4640,2915 @@ result.8         -2.756662e+81         2.444642e+81
 result.9         -3.299568e+81         2.982071e+81
 result.10        -3.168432e+81         2.681552e+81
 
-real	1m29.817s
-user	60m13.055s
-sys	2m43.674s
+real	1m20.338s
+user	54m27.552s
+sys	2m14.211s
 -----------------------------------
 Running with 29 parallel work items
-slurmstepd: error: *** JOB 62137480 ON q16c13n2 CANCELLED AT 2024-08-06T15:34:59 DUE TO TIME LIMIT ***
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+
+real	1m22.853s
+user	57m53.728s
+sys	2m37.927s
+-----------------------------------
+Running with 30 parallel work items
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+
+real	1m19.731s
+user	61m15.744s
+sys	2m41.483s
+-----------------------------------
+Running with 31 parallel work items
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+
+real	1m22.306s
+user	63m16.719s
+sys	2m52.130s
+-----------------------------------
+Running with 32 parallel work items
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+
+real	1m23.694s
+user	67m26.377s
+sys	3m6.230s
+-----------------------------------
+Running with 33 parallel work items
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+
+real	1m25.570s
+user	69m16.137s
+sys	2m53.108s
+-----------------------------------
+Running with 34 parallel work items
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+
+real	1m23.571s
+user	73m36.842s
+sys	3m21.261s
+-----------------------------------
+Running with 35 parallel work items
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+
+real	1m27.624s
+user	77m37.009s
+sys	3m25.780s
+-----------------------------------
+Running with 36 parallel work items
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+          Min Diagonal Element Max Diagonal Element
+result.1         -2.657710e+81         2.455079e+81
+result.2         -2.751950e+81         2.274180e+81
+result.3         -3.523732e+81         3.289227e+81
+result.4         -2.330106e+81         2.919354e+81
+result.5         -2.124385e+81         3.159595e+81
+result.6         -2.260128e+81         3.299129e+81
+result.7         -2.153723e+81         3.003021e+81
+result.8         -2.756662e+81         2.444642e+81
+result.9         -3.299568e+81         2.982071e+81
+result.10        -3.168432e+81         2.681552e+81
+
+real	1m25.226s
+user	79m37.413s
+sys	3m36.906s
+-----------------------------------

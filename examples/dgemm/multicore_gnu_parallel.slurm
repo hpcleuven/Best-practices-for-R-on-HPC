@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=72
-#SBATCH --time=00:30:00
+#SBATCH --time=01:00:00
 #SBATCH --partition=batch_sapphirerapids
 #SBATCH --cluster=wice
 
