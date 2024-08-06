@@ -129,11 +129,14 @@ $E(n) = \frac{T_1}{n \cdot T_n}$
 [Nice?, not so much...]{.fragment} [HPC infrastructure is *very* expensive!]{.fragment}
 
 
-## Lots to multiply
+## Lots of matrices to multiply
 
-Same script, many parameter settings
+Same script, many parameter settings ($N$)
 
-::: {style="font-size: 80%;"}
+::::: {.columns}
+
+:::: {.column width=50%}
+::: {style="font-size: 75%;"}
 | $N$           | $T_N$    | $S(N)$  | $E(N)$ |
 |---------------|----------|---------|--------|
 | 1             | 42.6     | 1.00    | 1.00   |
@@ -144,7 +147,15 @@ Same script, many parameter settings
 | 20            | 65.7     | 13.0    | 0.65   |
 | 24            | 74.5     | 13.7    | 0.57   |
 | 28            | 89.8     | 13.3    | 0.47   |
-| 32            |          |         |        |
-| 36            |          |         |        |
+| 32            | 83.6     | 16.3    | 0.51   |
+| 36            | 85.2     | 18.0    | 0.50   |
 :::
+::::
 
+:::: {.column width=50% .fragment}
+$N = 8$ seems optimal, but what the heck, you're ruining the node anyway
+
+Better go all the way to $N = 36$
+::::
+
+:::::
