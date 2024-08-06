@@ -249,3 +249,66 @@ module load R/4.4.0-gfbf-2023a
 
 Rscript ./hello_world_cla.R  --name "Bob"  --count 3
 ```
+
+
+## File I/O
+
+Easiest option: relative paths
+
+```bash
+$ Rscript ./weather_analysis.R  \
+      --input data/London.csv   \            # <1>
+      --quantity temp_max       \
+      --output tempmax_london.csv            # <2>
+```
+
+1. Input file in `data` directory, subdirectory of script's directory
+2. Output file in script's directory
+
+## R script {visibility=hidden}
+
+```{.r filename="weather_analysis.R"}
+library(optparse)
+option_list <- list(
+    make_option(c("-i", "--input"), type = "character",
+                help = "Path to the input CSV file"),
+    make_option(c("-q", "--quantity"), type = "character",
+                help = "Name of the quantity to analyze (e.g., temp, tempmax, tempmin)"),
+    make_option(c("-o", "--output"), type = "character",
+                help = "Path to the output CSV file")
+)
+opt <- parse_args(OptionParser(option_list = option_list))
+data <- read.csv(opt$input)
+if (!(opt$quantity %in% colnames(data))) {
+    stop(paste("The specified quantity", opt$quantity, "is not present in the data"))
+}
+data$month <- format(as.Date(data$datetime), "%m")
+monthly_avg <- aggregate(data[[opt$quantity]], by = list(data$month), FUN = mean)
+colnames(monthly_avg) <- c("Month", "Average")
+write.csv(monthly_avg, file = opt$output, row.names = FALSE)
+```
+
+## Job script {visibility=hidden}
+
+```{.bash filename="weather_analysis.slurm"}
+#!/usr/bin/env -S bash -l
+#SBATCH --account=lpt2_sysadmin
+#SBATCH --time=00:02:00
+#SBATCH --cluster=wice
+
+# first clean up your environment, then load R
+module purge &> /dev/null
+module load R/4.4.0-gfbf-2023a
+
+# define output directory and create it if it does not exist
+OUTDIR="output"
+mkdir -p $OUTDIR
+
+# define the quantity to analyse
+QUANTITY="tempmax"
+
+Rscript ./weather_analysis.R  \
+    --input data/London.csv   \
+    --quantity "$QUANTITY"    \
+    --output $OUTDIR/$QUANTITY.csv
+```
