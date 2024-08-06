@@ -1,0 +1,6 @@
+/.quarto/
+
+# editor backup files
+*~
+*.swp
+*.bak
