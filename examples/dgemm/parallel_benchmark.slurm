@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=96
-#SBATCH --time=00:30:00
+#SBATCH --time=01:00:00
 #SBATCH --partition=batch_sapphirerapids
 #SBATCH --cluster=wice
 
@@ -19,4 +19,9 @@ done
 
 # run with hyperfine
 set -x
-hyperfine --runs 3 "${args[@]}"
+hyperfine \
+    --runs 3 \
+    --parameter-list nr_cores 1,2,4,8,12,16,24,32,40,48,56,64,72,80,88,96 \
+    "./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores {nr_cores}"
+
+### Note: OMP_NUM_THREADS is not set on purpose.
