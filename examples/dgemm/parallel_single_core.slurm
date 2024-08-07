@@ -2,7 +2,7 @@
 #SBATCH --account=lpt2_sysadmin
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=72
+#SBATCH --cpus-per-task=96
 #SBATCH --time=00:30:00
 #SBATCH --partition=batch_sapphirerapids
 #SBATCH --cluster=wice
