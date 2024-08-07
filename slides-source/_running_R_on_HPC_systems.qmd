@@ -37,11 +37,15 @@ Terminal:
 ```bash
 $ module load R/4.4.0-gfbf-2023a            # <1>
 $ Rscript hello.R                           # <2>
-Hello from login-0-0!
+Hello from tier2-login-p-2 !
 ```
 
 1. Load the R version you want to use
 2. Run the script
+
+::: {.callout-warning .fragment}
+Don't run computationally intensive tasks on the login node!!!
+:::
 
 
 ## Module system
