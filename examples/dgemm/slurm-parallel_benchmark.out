@@ -1,68 +1,102 @@
+SLURM_JOB_ID: 62139946
+SLURM_JOB_USER: vsc30140
+SLURM_JOB_ACCOUNT: lpt2_sysadmin
+SLURM_JOB_NAME: parallel_benchmark.slurm
+SLURM_CLUSTER_NAME: wice
+SLURM_JOB_PARTITION: batch_sapphirerapids
+SLURM_NNODES: 1
+SLURM_NODELIST: q16c17n1
+SLURM_JOB_CPUS_PER_NODE: 96
+Date: Wed Aug  7 12:15:35 CEST 2024
+Walltime: 00-01:00:00
+========================================================================
++ hyperfine --runs 3 --parameter-list nr_cores 1,2,4,8,12,16,24,32,40,48,56,64,72,80,88,96 './dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores {nr_cores}'
 Benchmark 1: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 1
-  Time (mean ± σ):     31.828 s ±  0.740 s    [User: 784.417 s, System: 160.987 s]
-  Range (min … max):   31.201 s … 32.645 s    3 runs
+  Time (mean ± σ):     33.508 s ±  1.205 s    [User: 1122.812 s, System: 334.000 s]
+  Range (min … max):   32.453 s … 34.821 s    3 runs
  
 Benchmark 2: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 2
-  Time (mean ± σ):     24.173 s ±  0.608 s    [User: 821.945 s, System: 438.762 s]
-  Range (min … max):   23.612 s … 24.819 s    3 runs
+  Time (mean ± σ):     26.792 s ±  0.707 s    [User: 1171.959 s, System: 767.303 s]
+  Range (min … max):   26.007 s … 27.377 s    3 runs
  
 Benchmark 3: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 4
-  Time (mean ± σ):     29.942 s ±  0.710 s    [User: 823.680 s, System: 1202.763 s]
-  Range (min … max):   29.345 s … 30.727 s    3 runs
+  Time (mean ± σ):     32.139 s ±  0.312 s    [User: 1071.146 s, System: 1814.792 s]
+  Range (min … max):   31.852 s … 32.471 s    3 runs
  
 Benchmark 4: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 8
-  Time (mean ± σ):     31.271 s ±  0.182 s    [User: 764.253 s, System: 1406.684 s]
-  Range (min … max):   31.119 s … 31.472 s    3 runs
- 
-Benchmark 5: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 12
-  Time (mean ± σ):     31.928 s ±  0.900 s    [User: 792.469 s, System: 1440.587 s]
-  Range (min … max):   31.093 s … 32.881 s    3 runs
- 
-Benchmark 6: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 16
-  Time (mean ± σ):     30.524 s ±  0.833 s    [User: 790.477 s, System: 1343.182 s]
-  Range (min … max):   29.695 s … 31.361 s    3 runs
- 
-Benchmark 7: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 24
-  Time (mean ± σ):     30.246 s ±  0.344 s    [User: 807.946 s, System: 1310.183 s]
-  Range (min … max):   30.000 s … 30.639 s    3 runs
- 
-Benchmark 8: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 32
-  Time (mean ± σ):     27.836 s ±  0.252 s    [User: 781.206 s, System: 1168.236 s]
-  Range (min … max):   27.550 s … 28.026 s    3 runs
- 
-Benchmark 9: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 40
-  Time (mean ± σ):     26.427 s ±  0.345 s    [User: 765.322 s, System: 1084.726 s]
-  Range (min … max):   26.134 s … 26.808 s    3 runs
- 
-Benchmark 10: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 48
-  Time (mean ± σ):     24.422 s ±  1.345 s    [User: 745.356 s, System: 967.279 s]
-  Range (min … max):   22.869 s … 25.209 s    3 runs
+  Time (mean ± σ):     33.916 s ±  1.070 s    [User: 1008.485 s, System: 2147.113 s]
+  Range (min … max):   33.298 s … 35.151 s    3 runs
  
   Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
  
+Benchmark 5: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 12
+  Time (mean ± σ):     31.604 s ±  0.560 s    [User: 986.136 s, System: 1959.262 s]
+  Range (min … max):   30.989 s … 32.083 s    3 runs
+ 
+Benchmark 6: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 16
+  Time (mean ± σ):     31.639 s ±  0.752 s    [User: 1009.143 s, System: 1938.744 s]
+  Range (min … max):   31.114 s … 32.500 s    3 runs
+ 
+Benchmark 7: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 24
+  Time (mean ± σ):     27.206 s ±  0.461 s    [User: 983.112 s, System: 1550.360 s]
+  Range (min … max):   26.743 s … 27.665 s    3 runs
+ 
+Benchmark 8: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 32
+  Time (mean ± σ):     25.161 s ±  0.328 s    [User: 967.361 s, System: 1372.073 s]
+  Range (min … max):   24.968 s … 25.540 s    3 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 9: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 40
+  Time (mean ± σ):     22.094 s ±  0.399 s    [User: 920.334 s, System: 1129.151 s]
+  Range (min … max):   21.642 s … 22.400 s    3 runs
+ 
+Benchmark 10: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 48
+  Time (mean ± σ):     20.774 s ±  0.799 s    [User: 907.793 s, System: 1027.358 s]
+  Range (min … max):   19.923 s … 21.509 s    3 runs
+ 
 Benchmark 11: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 56
-  Time (mean ± σ):     23.813 s ±  1.888 s    [User: 743.766 s, System: 926.439 s]
-  Range (min … max):   22.367 s … 25.949 s    3 runs
+  Time (mean ± σ):     19.405 s ±  0.096 s    [User: 885.717 s, System: 913.199 s]
+  Range (min … max):   19.309 s … 19.502 s    3 runs
  
 Benchmark 12: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 64
-  Time (mean ± σ):     22.882 s ±  1.099 s    [User: 739.349 s, System: 866.959 s]
-  Range (min … max):   21.941 s … 24.090 s    3 runs
+  Time (mean ± σ):     19.585 s ±  0.165 s    [User: 889.316 s, System: 932.329 s]
+  Range (min … max):   19.418 s … 19.747 s    3 runs
  
 Benchmark 13: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 72
-  Time (mean ± σ):     22.574 s ±  0.419 s    [User: 743.177 s, System: 839.337 s]
-  Range (min … max):   22.171 s … 23.008 s    3 runs
+  Time (mean ± σ):     18.199 s ±  0.320 s    [User: 869.255 s, System: 822.249 s]
+  Range (min … max):   18.011 s … 18.569 s    3 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (18.569 s). This could be caused by (filesystem) caches that were not filled until after the first run. You should consider using the '--warmup' option to fill those caches before the actual benchmark. Alternatively, use the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 14: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 80
+  Time (mean ± σ):     17.386 s ±  0.734 s    [User: 858.392 s, System: 754.812 s]
+  Range (min … max):   16.935 s … 18.233 s    3 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (18.233 s). This could be caused by (filesystem) caches that were not filled until after the first run. You should consider using the '--warmup' option to fill those caches before the actual benchmark. Alternatively, use the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 15: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 88
+  Time (mean ± σ):     16.739 s ±  0.270 s    [User: 848.422 s, System: 706.227 s]
+  Range (min … max):   16.519 s … 17.040 s    3 runs
+ 
+Benchmark 16: ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 96
+  Time (mean ± σ):     16.030 s ±  0.037 s    [User: 836.820 s, System: 650.692 s]
+  Range (min … max):   15.990 s … 16.062 s    3 runs
  
 Summary
-  ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 72 ran
-    1.01 ± 0.05 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 64
-    1.05 ± 0.09 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 56
-    1.07 ± 0.03 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 2
-    1.08 ± 0.06 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 48
-    1.17 ± 0.03 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 40
-    1.23 ± 0.03 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 32
-    1.33 ± 0.04 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 4
-    1.34 ± 0.03 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 24
-    1.35 ± 0.04 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 16
-    1.39 ± 0.03 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 8
-    1.41 ± 0.04 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 1
-    1.41 ± 0.05 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 12
+  ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 96 ran
+    1.04 ± 0.02 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 88
+    1.08 ± 0.05 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 80
+    1.14 ± 0.02 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 72
+    1.21 ± 0.01 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 56
+    1.22 ± 0.01 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 64
+    1.30 ± 0.05 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 48
+    1.38 ± 0.03 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 40
+    1.57 ± 0.02 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 32
+    1.67 ± 0.04 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 2
+    1.70 ± 0.03 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 24
+    1.97 ± 0.04 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 12
+    1.97 ± 0.05 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 16
+    2.00 ± 0.02 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 4
+    2.09 ± 0.08 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 1
+    2.12 ± 0.07 times faster than ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores 8
