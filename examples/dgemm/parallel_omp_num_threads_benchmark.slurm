@@ -16,4 +16,4 @@ set -x
 hyperfine \
     --runs 3 \
     --parameter-list nr_cores 1,2,4,8,12,16,24,32,40,48,56,64,72,80,88,96 \
-    "OMP_NUM_THREADS=$(($SLURM_CPUS_PER_TASK/{nr_cores})) ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores {nr_cores}"
+    "OMP_NUM_THREADS=$(($SLURM_CPUS_PER_TASK / {nr_cores})) ./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores {nr_cores}"
