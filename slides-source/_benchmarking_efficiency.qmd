@@ -62,19 +62,23 @@ Uses multiple threads, each on a core
 Easy: set `--cpus-per-task` > 1
 
 ::: {style="font-size: 80%;"}
-| CPUs per task | walltime |
-|---------------|----------|
-| 1             | 109.6    |
-| 2             |  64.8    |
-| 4             |  50.5    |
-| 8             |  40.2    |
-| 12            |  34.3    |
-| 16            |  33.2    |
-| 32            |  31.8    |
+| CPUs per task ($n$) | walltime ($T_n$) |
+|---------------------|------------------|
+| 1                   | 109.6            |
+| 2                   |  64.8            |
+| 4                   |  50.5            |
+| 8                   |  40.2            |
+| 12                  |  34.3            |
+| 24                  |  31.5            |
+| 48                  |  31.0            |
+| 96                  |  33.0            |
 :::
 
 [Nice!]{.fragment}
 
+::: notes
+Results from dgemm/slurm-multicore_benchmark.out
+:::
 
 ## Speedup
 
@@ -88,11 +92,16 @@ $S(n) = \frac{T_1}{T_n}$
 | 4             |  50.5    | 2.17    |
 | 8             |  40.2    | 2.73    |
 | 12            |  34.3    | 3.20    |
-| 16            |  33.2    | 3.30    |
-| 32            |  31.8    | 3.45    |
+| 24            |  31.5    | 3.48    |
+| 48            |  31.0    | 3.54    |
+| 96            |  33.0    | 3.32    |
 :::
 
 [Nice? Maybe...]{.fragment}
+
+::: notes
+Results from dgemm/slurm-multicore_benchmark.out
+:::
 
 
 ## Parallel efficiency
@@ -107,11 +116,16 @@ $E(n) = \frac{T_1}{n \cdot T_n}$
 | 4             |  50.5    | 2.17    | 0.54   |
 | 8             |  40.2    | 2.73    | 0.34   |
 | 12            |  34.3    | 3.20    | 0.27   |
-| 16            |  33.2    | 3.30    | 0.21   |
-| 32            |  31.8    | 3.45    | 0.11   |
+| 24            |  31.5    | 3.48    | 0.14   |
+| 48            |  31.0    | 3.54    | 0.07   |
+| 96            |  33.0    | 3.32    | 0.03   |
 :::
 
 [Nice?, not so much...]{.fragment} [HPC infrastructure is *very* expensive!]{.fragment}
+
+::: notes
+Results from dgemm/slurm-multicore_benchmark.out
+:::
 
 
 ## Lots of matrices to multiply
@@ -119,21 +133,17 @@ $E(n) = \frac{T_1}{n \cdot T_n}$
 Same script, many parameter settings ($N$)
 
 ::::: {.columns}
-
 :::: {.column width=50%}
 ::: {style="font-size: 75%;"}
 | $N$           | $T_N$    | $S(N)$  | $E(N)$ |
 |---------------|----------|---------|--------|
-| 1             | 42.6     | 1.00    | 1.00   |
+| 1             | 42.6     | 1.00    | 1.00   
 | 4             | 43.7     | 3.90    | 0.98   |
 | 8             | 49.6     | 6.87    | 0.86   |
 | 12            | 65.3     | 7.82    | 0.65   |
-| 16            | 55.8     | 12.2    | 0.76   |
-| 20            | 65.7     | 13.0    | 0.65   |
-| 24            | 74.5     | 13.7    | 0.57   |
-| 28            | 89.8     | 13.3    | 0.47   |
-| 32            | 83.6     | 16.3    | 0.51   |
+| 24            | 74.5     | 13.7    | 0.|
 | 36            | 85.2     | 18.0    | 0.50   |
+| 48            | 94.3     | 21.6    | 0.45   |
 :::
 ::::
 
@@ -146,8 +156,11 @@ Better go all the way to $N = 48$
 `OMP_NUM_THREADS=2`
 :::
 ::::
-
 :::::
+
+::: notes
+Results from dgemm/slurm-multicore_gnu_parallel.out
+:::
 
 
 ## Why performance degradation?
@@ -171,8 +184,11 @@ It's the memory architecture, stupid!
 ## How to time?
 
 - In job script: `time`
+- In job script: `hyperfine`
+  - Runs command multiple times
+  - Reports mean, median, min, max, etc.
+  - Can compare multiple commands
 - For completed job
   ```bash
   $ sacct --cluster=<cluster> --format=JobID,TotalCPU,Elapsed --jobs=<job-id>
   ```
-- To compare in job script: `hyperfine`
