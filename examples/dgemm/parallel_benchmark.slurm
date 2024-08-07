@@ -11,12 +11,6 @@
 module load R/4.4.0-gfbf-2023a
 module load GCCcore/12.3.0
 
-# create list of commands to execute based on the number of cores
-args=()
-for nr_cores in 1 2 4 8 12 16 24 32 40 48 56 64 72; do
-    args+=("./dgemm.R --nr_matrices 144 --size 2000 --power 5 --nr_cores ${nr_cores}")
-done
-
 # run with hyperfine
 set -x
 hyperfine \
