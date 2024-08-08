@@ -25,3 +25,5 @@ using BLAS, which is parallelized using OpenMP. This script uses a parallel
    varies from 1 to 72, all the cores are used.
 1. `multicore_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=17`,
    `OMP_NUM_THREADS` ranging from 1 to 32 and `nr_cores 1`.
+1. `multicore_gnu_parallel.slurm`: runs `dgemm.R` using GNU `parallel` with `cpus_per_task=96`,
+   number of parallel work items increasing from 1 to 96, `OMP_NUM_THREADS` set to 2.
