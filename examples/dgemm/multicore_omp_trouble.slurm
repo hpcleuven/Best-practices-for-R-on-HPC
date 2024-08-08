@@ -18,7 +18,7 @@ function run_dgemm {
 export -f run_dgemm
 
 # run with an increasing number of parallel work items
-for i in $(seq $(( $SLURM_CPUS_PER_TASK / $OMP_NUM_THREADS ))); do
+for i in 1 2 4 8 12 18; do
     echo "Running with $i parallel work items"
     time parallel -j $i run_dgemm ::: $(seq $i) > /dev/null
     echo "-----------------------------------"
