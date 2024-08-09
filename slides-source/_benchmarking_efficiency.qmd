@@ -85,16 +85,16 @@ Results from dgemm/slurm-multicore_benchmark.out
 $S(n) = \frac{T_1}{T_n}$
 
 ::: {style="font-size: 80%;"}
-| $n$           | $T_n$    | $S(n)$  |
-|---------------|----------|---------|
-| 1             | 109.6    | 1.00    |
-| 2             |  64.8    | 1.69    |
-| 4             |  50.5    | 2.17    |
-| 8             |  40.2    | 2.73    |
-| 12            |  34.3    | 3.20    |
-| 24            |  31.5    | 3.48    |
-| 48            |  31.0    | 3.54    |
-| 96            |  33.0    | 3.32    |
+| $n$ | $T_n$ | $S(n)$ |
+|-----|-------|--------|
+| 1   | 109.6 | 1.00   |
+| 2   |  64.8 | 1.69   |
+| 4   |  50.5 | 2.17   |
+| 8   |  40.2 | 2.73   |
+| 12  |  34.3 | 3.20   |
+| 24  |  31.5 | 3.48   |
+| 48  |  31.0 | 3.54   |
+| 96  |  33.0 | 3.32   |
 :::
 
 [Nice? Maybe...]{.fragment}
@@ -109,16 +109,16 @@ Results from dgemm/slurm-multicore_benchmark.out
 $E(n) = \frac{T_1}{n \cdot T_n}$
 
 ::: {style="font-size: 80%;"}
-| $n$           | $T_n$    | $S(n)$  | $E(n)$ |
-|---------------|----------|---------|--------|
-| 1             | 109.6    | 1.00    | 1.00   |
-| 2             |  64.8    | 1.69    | 0.85   |
-| 4             |  50.5    | 2.17    | 0.54   |
-| 8             |  40.2    | 2.73    | 0.34   |
-| 12            |  34.3    | 3.20    | 0.27   |
-| 24            |  31.5    | 3.48    | 0.14   |
-| 48            |  31.0    | 3.54    | 0.07   |
-| 96            |  33.0    | 3.32    | 0.03   |
+| $n$ | $T_n$ | $S(n)$ | $E(n)$ |
+|-----|-------|--------|--------|
+| 1   | 109.6 | 1.00   | 1.00   |
+| 2   |  64.8 | 1.69   | 0.85   |
+| 4   |  50.5 | 2.17   | 0.54   |
+| 8   |  40.2 | 2.73   | 0.34   |
+| 12  |  34.3 | 3.20   | 0.27   |
+| 24  |  31.5 | 3.48   | 0.14   |
+| 48  |  31.0 | 3.54   | 0.07   |
+| 96  |  33.0 | 3.32   | 0.03   |
 :::
 
 [Nice?, not so much...]{.fragment} [HPC infrastructure is *very* expensive!]{.fragment}
@@ -128,22 +128,59 @@ Results from dgemm/slurm-multicore_benchmark.out
 :::
 
 
-## Lots of matrices to multiply
+## Lots of matrices...
 
-Same script, many parameter settings ($N$)
+Often same script run for many parameter settings ($N$)
 
 ::::: {.columns}
 :::: {.column width=50%}
 ::: {style="font-size: 75%;"}
-| $N$           | $T_N$    | $S(N)$  | $E(N)$ |
-|---------------|----------|---------|--------|
-| 1             | 42.6     | 1.00    | 1.00   
-| 4             | 43.7     | 3.90    | 0.98   |
-| 8             | 49.6     | 6.87    | 0.86   |
-| 12            | 65.3     | 7.82    | 0.65   |
-| 24            | 74.5     | 13.7    | 0.|
-| 36            | 85.2     | 18.0    | 0.50   |
-| 48            | 94.3     | 21.6    | 0.45   |
+| $N$ | $T_N$    | $S(N)$  | $E(N)$ |
+|-----|----------|---------|--------|
+| 1   | 14.0     | 1.00    | 1.00   |
+| 2   | 33.6     | 0.42    | 0.21   |
+| 4   | 90.1     | 0.16    | 0.04   |
+| 8   | 184.4    | 0.08    | 0.01   |
+| 12  | 252.5    | 0.06    | 0.005  |
+| 18  | 635.2    | 0.02    | 0.001  |
+:::
+::::
+:::: {.column width=50% .fragment}
+Oops!?!  Worse than serial?
+
+::: {.fragment}
+All R instances use 96 threads, so for $N = 18$...
+[$18 \times 96 = 1728$ threads $\gg$ number
+of cores]{.fragment}
+:::
+
+::: {.callout-warning .fragment}
+Massive oversubscription
+:::
+::::
+:::::
+
+::: notes
+Results from dgemm/slurm-multicore_omp_trouble.out
+:::
+
+
+## Control `OMP_NUM_THREADS`!
+
+Set `OMP_NUM_THREADS=2`
+
+::::: {.columns}
+:::: {.column width=50%}
+::: {style="font-size: 75%;"}
+| $N$ | $T_N$ | $S(N)$ | $E(N)$ |
+|-----|-------|--------|--------|
+| 1   | 42.6  | 1.00   | 1.00   
+| 4   | 43.7  | 3.90   | 0.98   |
+| 8   | 49.6  | 6.87   | 0.86   |
+| 12  | 65.3  | 7.82   | 0.65   |
+| 24  | 74.5  | 13.7   | 0.|
+| 36  | 85.2  | 18.0   | 0.50   |
+| 48  | 94.3  | 21.6   | 0.45   |
 :::
 ::::
 
@@ -152,8 +189,8 @@ $N = 8$ seems optimal, but what the heck, you're ruining the node anyway
 
 Better go all the way to $N = 48$
 
-::: {.callout-note}
-`OMP_NUM_THREADS=2`
+::: {.callout-tip .fragment}
+`OMP_NUM_THREADS` $\le$ number of cores
 :::
 ::::
 :::::
