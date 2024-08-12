@@ -8,7 +8,6 @@ format:
     theme: [default, ./vsc.scss]
     transiton: slide
     slide-number: true
-    incremental: true
 title-slide-attributes:
   data-background-image: vsc-title-bg.png
   data-background-size: contain
