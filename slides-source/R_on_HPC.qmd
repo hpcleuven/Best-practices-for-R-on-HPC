@@ -108,7 +108,7 @@ For $p$ low, `rnorm` dominates, for $p$ larger, `%*%` dominates.
 :::
 
 
-## Algorithm first!
+## Code optimization: algorithm first!
 
 - `%*%` pretty good, not much chance
 - However, $A^p = A \cdot \cdots \cdot A$?
