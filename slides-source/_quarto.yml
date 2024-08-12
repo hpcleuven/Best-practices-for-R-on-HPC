@@ -2,4 +2,6 @@ project:
   title: "R_on_HPC"
 
 
+filters:
+  - include-code-files
 
