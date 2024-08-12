@@ -81,6 +81,10 @@ results <- if (opt$nr_cores > 1) {
 }
 
 # Print the results as a table
-results_df <- as.data.frame(results)
-colnames(results_df) <- c("Min Diagonal Element", "Max Diagonal Element")
-print(results_df)
+if(opt$nr_matrices == 1) {
+    print(results)
+} else {
+    results_df <- as.data.frame(results)
+    colnames(results_df) <- c("Min Diagonal Element", "Max Diagonal Element")
+    print(results_df)
+}
