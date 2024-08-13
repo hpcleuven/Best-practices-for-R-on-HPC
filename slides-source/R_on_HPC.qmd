@@ -5,9 +5,13 @@ institution: "Vlaams Supercomputer Centrum"
 date: today
 format:
   revealjs:
+    theme: [default, ./vsc.scss]
     transiton: slide
     slide-number: true
-    incremental: true
+title-slide-attributes:
+  data-background-image: vsc-title-bg.png
+  data-background-size: contain
+  data-background-position: bottom
 code-annotations: select
 ---
 
@@ -16,8 +20,8 @@ code-annotations: select
 - How to run R on HPC systems
   - Open OnDemand
   - Batch jobs
-- Benchmarking: efficiency
 - Memory
+- Benchmarking: efficiency
 - Improving performance
   - Profiling
   - Code optimization
