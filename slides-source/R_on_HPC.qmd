@@ -20,8 +20,8 @@ code-annotations: select
 - How to run R on HPC systems
   - Open OnDemand
   - Batch jobs
-- Benchmarking: efficiency
 - Memory
+- Benchmarking: efficiency
 - Improving performance
   - Profiling
   - Code optimization
