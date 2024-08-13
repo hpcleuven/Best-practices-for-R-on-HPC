@@ -27,3 +27,6 @@ using BLAS, which is parallelized using OpenMP. This script uses a parallel
    `OMP_NUM_THREADS` ranging from 1 to 96 and `nr_cores 1`.
 1. `multicore_gnu_parallel.slurm`: runs `dgemm.R` using GNU `parallel` with `cpus_per_task=96`,
    number of parallel work items increasing from 1 to 96, `OMP_NUM_THREADS` set to 2.
+1. `memory_and_walltime.slurm`: runs `dgemm.R` with `cpus_per_task=2` and `--nr_cores
+   1` with matrix size and power to raise to given as command line arguments to `sbatch`.
+   This allows to benchmark for memory usage and walltime.
