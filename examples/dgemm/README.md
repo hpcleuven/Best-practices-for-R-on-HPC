@@ -27,28 +27,31 @@ using BLAS, which is parallelized using OpenMP. This script uses a parallel
    - `memory_and_walltime_info.txt`: text file with the job IDs, matrix sizes,
      powers to raise to, memory usage and walltime based on the file created by
      `get_info_memory_and_walltime.sh`.
-   - `slurm-62199209_out_of_walltime.txt`: output of a job that ran out of
+   - `slurm-62199209_out_of_walltime.out`: output of a job that ran out of
      walltime.
-   - `slurm-62199210_out_of_memory.txt`: output of a job that ran out of
+   - `slurm-62199210_out_of_memory.out`: output of a job that ran out of
      memory.
 1. `benchmarking efficiency`
-   a. multithreading
+   1. multithreading
       - `single_core.slurm`: runs `dgemm.R` with `cpus_per_task=1` and
         `--nr_cores 1`.
       - `multicore.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
         `OMP_NUM_THREADS=4` and `--nr_cores 1`.
-      - `multicore_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=96`,
-        `OMP_NUM_THREADS` ranging from 1 to 96 and `nr_cores 1`.
-   a. embarrassingly parallel workloads
-      - `parallel_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=96`,
-        `OMP_NUM_THREADS` unspecified and `--nr_cores` varying from 1 to 96.
-      - `parallel_omp_num_threads_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with
-        `cpus_per_task=96`, `OMP_NUM_THREADS` set such that when `--nr_cores`
-        varies from 1 to 96, all the cores are used.
-   a. parallelization
+      - `multicore_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with
+        `cpus_per_task=96`, `OMP_NUM_THREADS` ranging from 1 to 96 and
+        `nr_cores 1`.
+   1. embarrassingly parallel workloads
+      - `parallel_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with
+        `cpus_per_task=96`, `OMP_NUM_THREADS` unspecified and `--nr_cores`
+        varying from 1 to 96.
+      - `parallel_omp_num_threads_benchmark.slurm`: runs `dgemm.R` using
+        `hyperfine` with `cpus_per_task=96`, `OMP_NUM_THREADS` set such that
+        when `--nr_cores` varies from 1 to 96, all the cores are used.
+   1. parallelization (`foreach ... %dopar%`)
       - `parallel_single_core.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
         `OMP_NUM_THREADS=1` and `--nr_cores 4`.
       - `parallel_multicore.slurm`: runs 'dgemm.R` with `cpus_per_task=4`,
         `OMP_NUM_THREADS=2` and `--nr_cores 2`.
-      - `multicore_gnu_parallel.slurm`: runs `dgemm.R` using GNU `parallel` with `cpus_per_task=96`,
-        number of parallel work items increasing from 1 to 96, `OMP_NUM_THREADS` set to 2.
+      - `multicore_gnu_parallel.slurm`: runs `dgemm.R` using GNU `parallel`
+        with `cpus_per_task=96`, number of parallel work items increasing from
+        1 to 96, `OMP_NUM_THREADS` set to 2.
