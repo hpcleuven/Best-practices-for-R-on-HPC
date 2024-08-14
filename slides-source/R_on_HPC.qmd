@@ -20,7 +20,7 @@ code-annotations: select
 - How to run R on HPC systems
   - Open OnDemand
   - Batch jobs
-- Memory
+- Walltime & memory
 - Benchmarking: efficiency
 - Improving performance
   - Profiling
@@ -28,4 +28,21 @@ code-annotations: select
   - Parallel computing
 
 {{< include /_running_R_on_HPC_systems.qmd >}}
+
+
+# Walltime & memory
+
+
+## How long will your job run?
+
+- Specify walltime (`--time=HH:MM:SS`)
+- But how much?
+  - Don't underestimate!
+  - Don't (massively) overestimate
+- Experiment
+  - Start with "small" problem
+  - Increase problem size gradually
+  - Extrapolate to real problem
+
+
 {{< include /_benchmarking_efficiency.qmd >}}
