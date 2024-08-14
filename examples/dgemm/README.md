@@ -34,24 +34,28 @@ using BLAS, which is parallelized using OpenMP. This script uses a parallel
 1. `benchmarking efficiency`
    1. multithreading
       - `single_core.slurm`: runs `dgemm.R` with `cpus_per_task=1` and
-        `--nr_cores 1`.
+        `--nr_cores 1`.  Output is written to `slurm-single_core.out`.
       - `multicore.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
         `OMP_NUM_THREADS=4` and `--nr_cores 1`.
       - `multicore_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with
         `cpus_per_task=96`, `OMP_NUM_THREADS` ranging from 1 to 96 and
-        `nr_cores 1`.
+        `nr_cores 1`.  Output is in `slurm-multicore_benchmark.out`.
    1. embarrassingly parallel workloads
       - `parallel_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with
         `cpus_per_task=96`, `OMP_NUM_THREADS` unspecified and `--nr_cores`
-        varying from 1 to 96.
+        varying from 1 to 96.  Output is in `slurm-parallel_benchmark.out`.
       - `parallel_omp_num_threads_benchmark.slurm`: runs `dgemm.R` using
         `hyperfine` with `cpus_per_task=96`, `OMP_NUM_THREADS` set such that
-        when `--nr_cores` varies from 1 to 96, all the cores are used.
+        when `--nr_cores` varies from 1 to 96, all the cores are used. Output
+        is in `slurm-parallel_omp_num_threads_benchmark.out`.
    1. parallelization (`foreach ... %dopar%`)
       - `parallel_single_core.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
-        `OMP_NUM_THREADS=1` and `--nr_cores 4`.
+        `OMP_NUM_THREADS=1` and `--nr_cores 4`.  output is in
+        `slurm-parallel_single_core.out`.
       - `parallel_multicore.slurm`: runs 'dgemm.R` with `cpus_per_task=4`,
-        `OMP_NUM_THREADS=2` and `--nr_cores 2`.
+        `OMP_NUM_THREADS=2` and `--nr_cores 2`.  Output is in
+        `slurm-parallel_multicore.out`.
       - `multicore_gnu_parallel.slurm`: runs `dgemm.R` using GNU `parallel`
         with `cpus_per_task=96`, number of parallel work items increasing from
-        1 to 96, `OMP_NUM_THREADS` set to 2.
+        1 to 96, `OMP_NUM_THREADS` set to 2. Output is in
+        `slurm-multicore_gnu_parallel.out`.
