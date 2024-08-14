@@ -5,8 +5,8 @@ Example code used in this training.
 
 ## What is it?
 
-1. `hello_world`: submitting trivial R scripts as batch jobs on an HPC system.
-1. `weather_analysis`: analyzing weather data using R, illustrates I/O.
+1. `hello-world`: submitting trivial R scripts as batch jobs on an HPC system.
+1. `weather-analysis`: analyzing weather data using R, illustrates I/O.
 1. `dgemm`: matrix-matrix multiplication using a BLAS library.
 1. `julia-set`: Julia set computation parallelized using serveral
    parallelization packages.    
