@@ -10,23 +10,45 @@ using BLAS, which is parallelized using OpenMP. This script uses a parallel
 
 1. `dgemm.R`: script that performs multiple matrix multiplications using R's
    `foreach` package.
-1. `single_core.slurm`: runs `dgemm.R` with `cpus_per_task=1` and `--nr_cores
-   1`.
-1. `multicore.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
-   `OMP_NUM_THREADS=4` and `--nr_cores 1`.
-1. `parallel_single_core.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
-   `OMP_NUM_THREADS=1` and `--nr_cores 4`.
-1. `parallel_multicore.slurm`: runs 'dgemm.R` with `cpus_per_task=4`,
-   `OMP_NUM_THREADS=2` and `--nr_cores 2`.
-1. `parallel_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=96`,
-   `OMP_NUM_THREADS` unspecified and `--nr_cores` varying from 1 to 96.
-1. `parallel_omp_num_threads_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with
-   `cpus_per_task=96`, `OMP_NUM_THREADS` set such that when `--nr_cores`
-   varies from 1 to 96, all the cores are used.
-1. `multicore_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=96`,
-   `OMP_NUM_THREADS` ranging from 1 to 96 and `nr_cores 1`.
-1. `multicore_gnu_parallel.slurm`: runs `dgemm.R` using GNU `parallel` with `cpus_per_task=96`,
-   number of parallel work items increasing from 1 to 96, `OMP_NUM_THREADS` set to 2.
-1. `memory_and_walltime.slurm`: runs `dgemm.R` with `cpus_per_task=2` and `--nr_cores
-   1` with matrix size and power to raise to given as command line arguments to `sbatch`.
-   This allows to benchmark for memory usage and walltime.
+1. walltime and memory
+   - `memory_and_walltime.slurm`: script to run `dgemm.R` with varying matrix
+     sizes and powers to raise to as command line arguments to `sbatch` to
+     measure memory usage and walltime.
+   - `submit_memory_and_walltime_jobs.sh`: script to submit jobs to measure
+     memory usage and walltime for different matrix sizes and powers to raise
+     to.  It will create a text file with job IDs and the respective matrix
+     sizes and powers to raise to.
+   - `get_info_memory_and_walltime.sh`: script to get the memory usage and
+     walltime for the jobs submitted by `submit_memory_and_walltime_jobs.sh`.
+     It will create a text file with the job IDs, matrix sizes, powers to raise
+     to, memory usage and walltime based on the file created by
+     `submit_memory_and_walltime_jobs.sh`.  *Note*: this script should be run
+     on the cluster's (login) node as it uses `sacct` to collect the data.
+   - `memory_and_walltime_info.txt`: text file with the job IDs, matrix sizes,
+     powers to raise to, memory usage and walltime based on the file created by
+     `get_info_memory_and_walltime.sh`.
+   - `slurm-62199209_out_of_walltime.txt`: output of a job that ran out of
+     walltime.
+   - `slurm-62199210_out_of_memory.txt`: output of a job that ran out of
+     memory.
+1. `benchmarking efficiency`
+   a. multithreading
+      - `single_core.slurm`: runs `dgemm.R` with `cpus_per_task=1` and
+        `--nr_cores 1`.
+      - `multicore.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
+        `OMP_NUM_THREADS=4` and `--nr_cores 1`.
+      - `multicore_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=96`,
+        `OMP_NUM_THREADS` ranging from 1 to 96 and `nr_cores 1`.
+   a. embarrassingly parallel workloads
+      - `parallel_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with `cpus_per_task=96`,
+        `OMP_NUM_THREADS` unspecified and `--nr_cores` varying from 1 to 96.
+      - `parallel_omp_num_threads_benchmark.slurm`: runs `dgemm.R` using `hyperfine` with
+        `cpus_per_task=96`, `OMP_NUM_THREADS` set such that when `--nr_cores`
+        varies from 1 to 96, all the cores are used.
+   a. parallelization
+      - `parallel_single_core.slurm`: runs `dgemm.R` with `cpus_per_task=4`,
+        `OMP_NUM_THREADS=1` and `--nr_cores 4`.
+      - `parallel_multicore.slurm`: runs 'dgemm.R` with `cpus_per_task=4`,
+        `OMP_NUM_THREADS=2` and `--nr_cores 2`.
+      - `multicore_gnu_parallel.slurm`: runs `dgemm.R` using GNU `parallel` with `cpus_per_task=96`,
+        number of parallel work items increasing from 1 to 96, `OMP_NUM_THREADS` set to 2.
