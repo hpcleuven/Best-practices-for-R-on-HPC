@@ -33,20 +33,36 @@
 #
 # Command line options are parsed using the `optparse` package.
 
-# Load the optparse package, define the options and parse the command line arguments
+# Load the required packages
 library(optparse)
+library(here)
+
+# Define the options and parse the command line arguments
 option_list <- list(
-                    make_option(c("-i", "--input"), type = "character",
-                                help = "Path to the input CSV file"),
-                    make_option(c("-q", "--quantity"), type = "character",
+                    make_option(c("-c", "--city"), type = "character",
+                                help = "Name of the city to analyze weather data for"),
+                    make_option(c("-q", "--quantity"), type = "character", default = "temp",
                                 help = "Name of the quantity to analyze (e.g., temp, tempmax, tempmin)"),
                     make_option(c("-o", "--output"), type = "character",
                                 help = "Path to the output CSV file")
 )
 opt <- parse_args(OptionParser(option_list = option_list))
 
+# Check if the the output file name contains a directory, that this directory exists, and if not, create it
+if (dirname(opt$output) != ".") {
+    dir.create(dirname(opt$output), showWarnings = FALSE, recursive = TRUE)
+}
+
+# Construct the path to the input CSV file
+input_file <- here("data", paste0(opt$city, ".csv"))
+
+# Check if the input CSV file exists, if not, print an error message to STDERR and exit
+if (!file.exists(input_file)) {
+    stop(paste("The input CSV file", input_file, "does not exist"))
+}
+
 # Read the input CSV file
-data <- read.csv(opt$input)
+data <- read.csv(input_file)
 
 # Check if the specified quantity is present in the data
 if (!(opt$quantity %in% colnames(data))) {

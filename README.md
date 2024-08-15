@@ -7,7 +7,7 @@ on HPC facilities.
 <<<<<<< HEAD
 ## What is it?
 
-1. `examples`: R code examples for the course.
+1. `projects`: R projects with code examples for the course.
 1. `CODE_OF_CONDUCT.md`: code of conduct for the course.
 1. `LICENSE`: license information for the course material.
 1. `CONTRIBUTING.md`: guidelines for contributing to the course material.
