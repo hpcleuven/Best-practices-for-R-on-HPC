@@ -21,7 +21,7 @@ code-annotations: select
   - Open OnDemand
   - Batch jobs
 - Walltime & memory
-- Benchmarking: efficiency
+- Efficiency
 - Improving performance
   - Profiling
   - Code optimization
@@ -29,5 +29,5 @@ code-annotations: select
 
 {{< include /_running_R_on_HPC_systems.qmd >}}
 {{< include /_walltime_and_memory.qmd >}}
-{{< include /_benchmarking_efficiency.qmd >}}
+{{< include /_efficiency.qmd >}}
 {{< include /_profiling_and_optimization.qmd >}}
