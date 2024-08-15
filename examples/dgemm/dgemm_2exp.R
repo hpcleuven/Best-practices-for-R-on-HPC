@@ -45,13 +45,21 @@ generate_matrix <- function(size) {
     matrix(rnorm(size^2), nrow=size)
 }
 
-# Function to compute the matrix power
+# Function to compute the matrix power using binary exponentiation
 matrix_power <- function(A, power) {
-    result <- A
-    for (i in 1:(power-1)) {
-        result <- result %*% A
+    bits <- as.integer(intToBits(power))
+    result <- diag(nrow(A))
+    A_power <- A
+    # loop until all 1-bits are consumed
+    for (i in 1:(1 + log2(power))) {
+        if (i > 1) {
+            A_power <- A_power %*% A_power
+        }
+        if (bits[i] == 1) {
+            result <- result %*% A_power
+        }
     }
-    result
+    return(result)
 }
 
 # Function to compute the minimum and maximum diagonal elements of a matrix

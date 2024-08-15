@@ -29,3 +29,4 @@ code-annotations: select
 
 {{< include /_running_R_on_HPC_systems.qmd >}}
 {{< include /_benchmarking_efficiency.qmd >}}
+{{< include /_profiling_and_optimization.qmd >}}
