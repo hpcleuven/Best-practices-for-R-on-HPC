@@ -291,3 +291,60 @@ Rscript ./weather_analysis.R  \
     --quantity "$QUANTITY"    \
     --output $OUTDIR/$QUANTITY.csv
 ```
+
+
+## But wait, there is no `optparse`!
+
+::: {.incremental}
+- Not all packages are installed on HPC systems
+- Install packages in VSC_DATA directory
+  - Pure R/no depencies on external libraries: easy
+  - Other packages: more difficult, use modules
+- Packages specific for R major version/cluster/architecture
+:::
+
+
+## Prepare environment
+
+Create package directory for cluster/architecture/R version
+```bash
+$ mkdir -p $VSC_DATA/R/wice/sapphirerapics/4.4
+```
+Only once per cluster/architecture/R version!
+
+::: {.fragment}
+Create R environment file in `$VSC_HOME`
+```bash
+$ echo "R_LIBS_USER=$VSC_DATA/R/wice/sapphirerapics/4.4" \
+     > $VSC_HOME/.Renviron
+```
+Works only for specified cluster/architecture/R version!
+:::
+
+
+## Install packages
+
+Start interactive job on cluster wice
+```bash
+$ srun --account=lpt2_sysadmin --time=00:30:00 \
+      --cluster=wice --partition=batch_sapphirerapids \
+      --pty /bin/bash -l
+
+```
+
+::: {.fragment}
+Install the package(s)
+```bash
+$ module load R/4.4.0-gfbf-2023a
+$ R
+> install.packages("optparse")
+```
+:::
+
+::: {.fragment}
+If you have trouble, contact the HPC helpdesk, specify
+
+- packages to install
+- R version
+- cluster and architecture
+:::
