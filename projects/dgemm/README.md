@@ -8,6 +8,12 @@ using BLAS, which is parallelized using OpenMP. This script uses a parallel
 
 ## What is it?
 
+1. Environment
+    - `.Rprofile`: R profile file that activates `renv`.
+    - `renv.lock`: lock file for the R environment.
+    - `renv`: directory with the R environment.
+      - `activate.R`: script to activate the R environment.
+      - `settings.json`: settings file for the R environment.
 1. `dgemm.R`: script that performs multiple matrix multiplications using R's
    `foreach` package.
 1. walltime and memory
