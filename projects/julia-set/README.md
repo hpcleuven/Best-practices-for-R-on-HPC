@@ -12,6 +12,12 @@ The problem can be parallelized by dividing the image into smaller regions.
 
 ## What is it?
 
+1. Environment
+    - `.Rprofile`: R profile file that activates `renv`.
+    - `renv.lock`: lock file for the R environment.
+    - `renv`: directory with the R environment.
+      - `activate.R`: script to activate the R environment.
+      - `settings.json`: settings file for the R environment.
 1. `julia_utils.R`: R functions to handle command line arguments.
 1. `julia_serial.R`: R functions that generate the Julia set for a given
    complex number `c` using a serial algorithm.
