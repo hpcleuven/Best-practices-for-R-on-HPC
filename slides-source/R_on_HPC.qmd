@@ -1,5 +1,5 @@
 ---
-title: "R on HPC"
+title: "Best practices for R on HPC"
 author: "Mariana Montes, Ehsan Moravveji, Geert Jan Bex"
 institution: "Vlaams Supercomputer Centrum"
 date: today
