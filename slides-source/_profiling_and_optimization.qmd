@@ -101,3 +101,5 @@ Binary exponentiation: 5 versus 12 muliplications
 ::: notes
 
 Source code in dgemm_2exp.R
+
+:::
