@@ -38,8 +38,8 @@ Total duration: 1.5 hours
 ## Training materials
 
 Slides can be viewed directly on the
-[web](https://gjbex.github.io/R-on-HPC/slides/R_on_HPC.html). Example projects
-can be found in the [GitHub repository](https://github.com/gjbex/R-on-HPC).
+[web](https://hpcleuven.github.io/Best-practices-for-R-on-HPC/slides/R_on_HPC.html). Example projects
+can be found in the [GitHub repository](https://github.com/hpcleuven/Best-practices-for-R-on-HPC).
 
 
 ## Target audience
