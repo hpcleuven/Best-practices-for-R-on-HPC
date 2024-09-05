@@ -25,7 +25,6 @@ code-annotations: select
 - Improving performance
   - Profiling
   - Code optimization
-  - Parallel computing
 
 {{< include /_running_R_on_HPC_systems.qmd >}}
 {{< include /_walltime_and_memory.qmd >}}
