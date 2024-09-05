@@ -1,5 +1,5 @@
 ---
-title: "R on HPC"
+title: "Best practices for R on HPC"
 author: "Mariana Montes, Ehsan Moravveji, Geert Jan Bex"
 institution: "Vlaams Supercomputer Centrum"
 date: today
@@ -8,7 +8,6 @@ format:
     theme: [default, ./vsc.scss]
     transiton: slide
     slide-number: true
-    incremental: true
 title-slide-attributes:
   data-background-image: vsc-title-bg.png
   data-background-size: contain
@@ -21,12 +20,13 @@ code-annotations: select
 - How to run R on HPC systems
   - Open OnDemand
   - Batch jobs
-- Benchmarking: efficiency
-- Memory
+- Walltime & memory
+- Efficiency
 - Improving performance
   - Profiling
   - Code optimization
-  - Parallel computing
 
 {{< include /_running_R_on_HPC_systems.qmd >}}
-{{< include /_benchmarking_efficiency.qmd >}}
+{{< include /_walltime_and_memory.qmd >}}
+{{< include /_efficiency.qmd >}}
+{{< include /_profiling_and_optimization.qmd >}}
