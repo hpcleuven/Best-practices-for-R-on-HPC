@@ -1,5 +1,3 @@
 project:
   title: "R_on_HPC"
-
-
-
+  output-dir: "../docs/slides"
