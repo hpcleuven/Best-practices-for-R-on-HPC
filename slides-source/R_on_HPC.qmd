@@ -17,6 +17,7 @@ code-annotations: select
 
 ## Overview
 
+- Motivation
 - How to run R on HPC systems
   - Open OnDemand
   - Batch jobs
@@ -25,8 +26,61 @@ code-annotations: select
 - Improving performance
   - Profiling
   - Code optimization
+- Wrap up
+
+
+# Motivation
+
+
+## Why R on HPC?
+
+- Computation takes lots of time
+- Large dataset, not enough RAM
+- Many different scenarios to compute
+
+::: {.fragment}
+Or any combination of these
+:::
+
+
+## Is it hard?
+
+::: {.callout-warning}
+There is a learning curve
+:::
+
+::: {.callout-tip .fragment}
+It's not rocket science
+
+:::: {.fragment}
+- Training is available
+- Support is there to help
+::::
+:::
+
 
 {{< include /_running_R_on_HPC_systems.qmd >}}
 {{< include /_walltime_and_memory.qmd >}}
 {{< include /_efficiency.qmd >}}
 {{< include /_profiling_and_optimization.qmd >}}
+
+
+# Wrap up
+
+## Conclusions
+
+- Running R on HPC is easy
+- Running R on HPC efficiently... [requires care]{.fragment}
+
+
+## How to proceed?
+
+If necessary, take trainings
+
+- HPC intro
+- Linux intro
+- Contact support
+
+::: {.callout-tip .fragment}
+If you are a programmer, consider parallelization
+:::
