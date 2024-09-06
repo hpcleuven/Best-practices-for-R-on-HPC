@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Mariana Montes, Ehsan Moravveji, Geert Jan Bex">
-  <meta name="dcterms.date" content="2024-09-05">
+  <meta name="dcterms.date" content="2024-09-06">
   <title>Best practices for R on HPC</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -402,7 +402,7 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 </div>
 </div>
 
-  <p class="date">2024-09-05</p>
+  <p class="date">2024-09-06</p>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
@@ -1299,7 +1299,9 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <section id="how-to-exploit-that" class="slide level2">
 <h2>How to exploit that?</h2>
 <p>Easy: set <code>--cpus-per-task</code> &gt; 1</p>
-<div style="font-size: 80%;">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 70%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1343,6 +1345,9 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 </tbody>
 </table>
 </div>
+</div><div class="column fragment" style="width:50%;">
+<p><img data-src="./img/walltime_vs_cpus_per_task.png"></p>
+</div></div>
 <p><span class="fragment">Nice!</span></p>
 <aside class="notes">
 <p>Results from dgemm/slurm-multicore_benchmark.out</p>
@@ -1361,6 +1366,8 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <section id="speedup" class="slide level2">
 <h2>Speedup</h2>
 <p><span class="math inline">\(S(n) = \frac{T_1}{T_n}\)</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div style="font-size: 80%;">
 <table class="caption-top">
 <thead>
@@ -1414,6 +1421,9 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 </tbody>
 </table>
 </div>
+</div><div class="column fragment" style="width:50%;">
+<p><img data-src="./img/speedup_vs_cpus_per_task.png"></p>
+</div></div>
 <p><span class="fragment">Nice? Maybe…</span></p>
 <aside class="notes">
 <p>Results from dgemm/slurm-multicore_benchmark.out</p>
@@ -1432,6 +1442,8 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <section id="parallel-efficiency" class="slide level2">
 <h2>Parallel efficiency</h2>
 <p><span class="math inline">\(E(n) = \frac{T_1}{n \cdot T_n}\)</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div style="font-size: 80%;">
 <table class="caption-top">
 <thead>
@@ -1494,6 +1506,9 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 </tbody>
 </table>
 </div>
+</div><div class="column fragment" style="width:50%;">
+<p><img data-src="./img/efficiency_vs_cpus_per_task.png"></p>
+</div></div>
 <p><span class="fragment">Nice?, not so much…</span> <span class="fragment">HPC infrastructure is <em>very</em> expensive!</span></p>
 <aside class="notes">
 <p>Results from dgemm/slurm-multicore_benchmark.out</p>

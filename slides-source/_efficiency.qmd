@@ -61,7 +61,9 @@ Uses multiple threads, each on a core
 
 Easy: set `--cpus-per-task` > 1
 
-::: {style="font-size: 80%;"}
+::::: {.columns}
+:::: {.column width=50%}
+::: {style="font-size: 70%;"}
 | CPUs per task ($n$) | walltime ($T_n$) |
 |---------------------|------------------|
 | 1                   | 109.6            |
@@ -73,6 +75,11 @@ Easy: set `--cpus-per-task` > 1
 | 48                  |  31.0            |
 | 96                  |  33.0            |
 :::
+::::
+:::: {.column width=50% .fragment}
+![](/img/walltime_vs_cpus_per_task.png)
+::::
+:::::
 
 [Nice!]{.fragment}
 
@@ -84,6 +91,8 @@ Results from dgemm/slurm-multicore_benchmark.out
 
 $S(n) = \frac{T_1}{T_n}$
 
+::::: {.columns}
+:::: {.column width=50%}
 ::: {style="font-size: 80%;"}
 | $n$ | $T_n$ | $S(n)$ |
 |-----|-------|--------|
@@ -96,6 +105,11 @@ $S(n) = \frac{T_1}{T_n}$
 | 48  |  31.0 | 3.54   |
 | 96  |  33.0 | 3.32   |
 :::
+::::
+:::: {.column width=50% .fragment}
+![](/img/speedup_vs_cpus_per_task.png)
+::::
+:::::
 
 [Nice? Maybe...]{.fragment}
 
@@ -108,6 +122,8 @@ Results from dgemm/slurm-multicore_benchmark.out
 
 $E(n) = \frac{T_1}{n \cdot T_n}$
 
+::::: {.columns}
+:::: {.column width=50%}
 ::: {style="font-size: 80%;"}
 | $n$ | $T_n$ | $S(n)$ | $E(n)$ |
 |-----|-------|--------|--------|
@@ -120,6 +136,11 @@ $E(n) = \frac{T_1}{n \cdot T_n}$
 | 48  |  31.0 | 3.54   | 0.07   |
 | 96  |  33.0 | 3.32   | 0.03   |
 :::
+::::
+:::: {.column width=50% .fragment}
+![](/img/efficiency_vs_cpus_per_task.png)
+::::
+:::::
 
 [Nice?, not so much...]{.fragment} [HPC infrastructure is *very* expensive!]{.fragment}
 
