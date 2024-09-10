@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Mariana Montes, Ehsan Moravveji, Geert Jan Bex">
-  <meta name="dcterms.date" content="2024-09-06">
+  <meta name="dcterms.date" content="2024-09-10">
   <title>Best practices for R on HPC</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -402,7 +402,7 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 </div>
 </div>
 
-  <p class="date">2024-09-06</p>
+  <p class="date">2024-09-10</p>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
@@ -808,39 +808,66 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <h2>But wait, there is no <code>optparse</code>!</h2>
 <div>
 <ul>
-<li class="fragment">Not all packages are installed on HPC systems</li>
-<li class="fragment">Install packages in VSC_DATA directory
+<li class="fragment"><p>Many available through <code>R-bundle-CRAN</code> module</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href=""></a><span class="ex">$</span> module load R-bundle-CRAN/2023.12-foss-2023a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li class="fragment"><p>Not all packages are installed though</p></li>
+<li class="fragment"><p>Install packages in VSC_DATA directory</p>
 <ul>
 <li class="fragment">Pure R/no depencies on external libraries: easy</li>
 <li class="fragment">Other packages: more difficult, use modules</li>
 </ul></li>
-<li class="fragment">Packages specific for R major version/cluster/architecture</li>
+<li class="fragment"><p>Packages specific for R major version/cluster/architecture</p></li>
+</ul>
+</div>
+</section>
+<section id="install-procedure" class="slide level2">
+<h2>Install procedure</h2>
+<p>Start interactive job on cluster wice</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href=""></a><span class="ex">$</span> srun <span class="at">--account</span><span class="op">=</span>lpt2_sysadmin <span class="at">--time</span><span class="op">=</span>00:30:00 <span class="dt">\</span></span>
+<span id="cb8-2"><a href=""></a>      <span class="at">--cluster</span><span class="op">=</span>wice <span class="at">--partition</span><span class="op">=</span>batch_sapphirerapids <span class="dt">\</span></span>
+<span id="cb8-3"><a href=""></a>      <span class="at">--pty</span> /bin/bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>Load</p>
+<ul>
+<li><p>R module</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href=""></a><span class="ex">$</span> module load R/4.4.0-gfbf-2023a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>or <code>R-bundle-CRAN</code> module</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href=""></a><span class="ex">$</span> module load R-bundle-CRAN/2023.12-foss-2023a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </div>
 </section>
 <section id="prepare-environment" class="slide level2">
 <h2>Prepare environment</h2>
+<p>Define environment variable</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href=""></a><span class="ex">$</span> export R_LIBS_USER=<span class="va">$VSC_DATA</span>/R/<span class="va">$VSC_ARCH_LOCAL</span>/<span class="va">$EBVERSIONR</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Create package directory for cluster/architecture/R version</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href=""></a><span class="ex">$</span> mkdir <span class="at">-p</span> <span class="va">$VSC_DATA</span>/R/wice/sapphirerapics/4.4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href=""></a><span class="ex">$</span> mkdir <span class="at">-p</span> <span class="va">$R_LIBS_USER</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Only once per cluster/architecture/R version!</p>
 <div class="fragment">
-<p>Create R environment file in <code>$VSC_HOME</code></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href=""></a><span class="ex">$</span> echo <span class="st">"R_LIBS_USER=</span><span class="va">$VSC_DATA</span><span class="st">/R/wice/sapphirerapics/4.4"</span> <span class="dt">\</span></span>
-<span id="cb8-2"><a href=""></a>     <span class="op">&gt;</span> <span class="va">$VSC_HOME</span>/.Renviron</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create <code>.Renviron</code> file in <code>$VSC_HOME</code></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href=""></a><span class="ex">$</span> echo <span class="st">"R_LIBS_USER=</span><span class="va">$R_LIBS_USER</span><span class="st">"</span> <span class="op">&gt;</span> <span class="va">$VSC_HOME</span>/.Renviron</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Works only for specified cluster/architecture/R version!</p>
 </div>
 </section>
-<section id="install-packages" class="slide level2">
-<h2>Install packages</h2>
-<p>Start interactive job on cluster wice</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href=""></a><span class="ex">$</span> srun <span class="at">--account</span><span class="op">=</span>lpt2_sysadmin <span class="at">--time</span><span class="op">=</span>00:30:00 <span class="dt">\</span></span>
-<span id="cb9-2"><a href=""></a>      <span class="at">--cluster</span><span class="op">=</span>wice <span class="at">--partition</span><span class="op">=</span>batch_sapphirerapids <span class="dt">\</span></span>
-<span id="cb9-3"><a href=""></a>      <span class="at">--pty</span> /bin/bash <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
+<section id="actual-installation" class="slide level2">
+<h2>Actual installation</h2>
 <p>Install the package(s)</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href=""></a><span class="ex">$</span> module load R/4.4.0-gfbf-2023a</span>
-<span id="cb10-2"><a href=""></a><span class="ex">$</span> R</span>
-<span id="cb10-3"><a href=""></a><span class="op">&gt;</span> install.packages<span class="kw">(</span><span class="st">"optparse"</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href=""></a><span class="ex">$</span> R</span>
+<span id="cb14-2"><a href=""></a><span class="op">&gt;</span> install.packages<span class="kw">(</span><span class="st">"optparse"</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <code>renv</code> for managing R environments and dependencies</p>
+</div>
+</div>
+</div>
 </div>
 <div class="fragment">
 <p>If you have trouble, contact the HPC helpdesk, specify</p>
@@ -882,7 +909,7 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <li>computes <span class="math inline">\(A^p\)</span></li>
 <li>determiness minimum and maximum diagonal element</li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash fragment number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href=""></a><span class="ex">Rscript</span> dgemm.R  <span class="at">--size</span> 1000  <span class="at">--power</span> 15</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash fragment number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href=""></a><span class="ex">Rscript</span> dgemm.R  <span class="at">--size</span> 1000  <span class="at">--power</span> 15</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="benchmark-job-script" class="slide level2">
 <h2>Benchmark job script</h2>
@@ -890,40 +917,40 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <div class="code-with-filename-file">
 <pre><strong>"memory_and_walltime.slurm</strong></pre>
 </div>
-<div class="sourceCode" id="annotated-cell-15" data-filename="&quot;memory_and_walltime.slurm"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-15-1"><a href="#annotated-cell-15-1"></a><span class="co">#!/usr/bin/env -S bash -l</span></span>
-<span id="annotated-cell-15-2"><a href="#annotated-cell-15-2"></a><span class="co">#SBATCH --account=lpt2_sysadmin</span></span>
-<span id="annotated-cell-15-3"><a href="#annotated-cell-15-3"></a><span class="co">#SBATCH --nodes=1</span></span>
-<span id="annotated-cell-15-4"><a href="#annotated-cell-15-4"></a><span class="co">#SBATCH --ntasks=1</span></span>
-<span id="annotated-cell-15-5"><a href="#annotated-cell-15-5"></a><span class="co">#SBATCH --cpus-per-task=1</span></span>
-<span id="annotated-cell-15-6"><a href="#annotated-cell-15-6"></a><span class="co">#SBATCH --time=01:00:00</span></span>
-<span id="annotated-cell-15-7"><a href="#annotated-cell-15-7"></a><span class="co">#SBATCH --partition=batch_sapphirerapids</span></span>
-<span id="annotated-cell-15-8"><a href="#annotated-cell-15-8"></a><span class="co">#SBATCH --cluster=wice</span></span>
-<span id="annotated-cell-15-9"><a href="#annotated-cell-15-9"></a></span>
-<span id="annotated-cell-15-10"><a href="#annotated-cell-15-10"></a><span class="ex">module</span> load R/4.4.0-gfbf-2023a</span>
-<span id="annotated-cell-15-11"><a href="#annotated-cell-15-11"></a><span class="ex">module</span> load GCCcore/12.3.0</span>
-<span id="annotated-cell-15-12"><a href="#annotated-cell-15-12"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-15" data-target-annotation="1">1</button><span id="annotated-cell-15-13" class="code-annotation-target"><a href="#annotated-cell-15-13"></a><span class="ex">Rscript</span> dgemm.R <span class="at">--size</span> <span class="va">$SIZE</span> <span class="at">--power</span> <span class="va">$POWER</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-17" data-filename="&quot;memory_and_walltime.slurm"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-17-1"><a href="#annotated-cell-17-1"></a><span class="co">#!/usr/bin/env -S bash -l</span></span>
+<span id="annotated-cell-17-2"><a href="#annotated-cell-17-2"></a><span class="co">#SBATCH --account=lpt2_sysadmin</span></span>
+<span id="annotated-cell-17-3"><a href="#annotated-cell-17-3"></a><span class="co">#SBATCH --nodes=1</span></span>
+<span id="annotated-cell-17-4"><a href="#annotated-cell-17-4"></a><span class="co">#SBATCH --ntasks=1</span></span>
+<span id="annotated-cell-17-5"><a href="#annotated-cell-17-5"></a><span class="co">#SBATCH --cpus-per-task=1</span></span>
+<span id="annotated-cell-17-6"><a href="#annotated-cell-17-6"></a><span class="co">#SBATCH --time=01:00:00</span></span>
+<span id="annotated-cell-17-7"><a href="#annotated-cell-17-7"></a><span class="co">#SBATCH --partition=batch_sapphirerapids</span></span>
+<span id="annotated-cell-17-8"><a href="#annotated-cell-17-8"></a><span class="co">#SBATCH --cluster=wice</span></span>
+<span id="annotated-cell-17-9"><a href="#annotated-cell-17-9"></a></span>
+<span id="annotated-cell-17-10"><a href="#annotated-cell-17-10"></a><span class="ex">module</span> load R/4.4.0-gfbf-2023a</span>
+<span id="annotated-cell-17-11"><a href="#annotated-cell-17-11"></a><span class="ex">module</span> load GCCcore/12.3.0</span>
+<span id="annotated-cell-17-12"><a href="#annotated-cell-17-12"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-17" data-target-annotation="1">1</button><span id="annotated-cell-17-13" class="code-annotation-target"><a href="#annotated-cell-17-13"></a><span class="ex">Rscript</span> dgemm.R <span class="at">--size</span> <span class="va">$SIZE</span> <span class="at">--power</span> <span class="va">$POWER</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-15" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-17" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-15" data-code-lines="13" data-code-annotation="1">Note <code>SIZE</code> and <code>POWER</code> environment variables</span>
+<span data-code-cell="annotated-cell-17" data-code-lines="13" data-code-annotation="1">Note <code>SIZE</code> and <code>POWER</code> environment variables</span>
 </dd>
 </dl>
 </section>
 <section id="running-benchmark" class="slide level2">
 <h2>Running benchmark</h2>
 <p>Submit with range of values for <code>SIZE</code> and <code>POWER</code>, e.g.,</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=10  memory_and_walltime.slurm</span>
-<span id="cb12-2"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=20  memory_and_walltime.slurm</span>
-<span id="cb12-3"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=40  memory_and_walltime.slurm</span>
-<span id="cb12-4"><a href=""></a><span class="ex">10$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=000,POWER=10  memory_and_walltime.slurm</span>
-<span id="cb12-5"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=000,POWER=20  memory_and_walltime.slurm</span>
-<span id="cb12-6"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=000,POWER=40  memory_and_walltime.slurm</span>
-<span id="cb12-7"><a href=""></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=10  memory_and_walltime.slurm</span>
+<span id="cb16-2"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=20  memory_and_walltime.slurm</span>
+<span id="cb16-3"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=40  memory_and_walltime.slurm</span>
+<span id="cb16-4"><a href=""></a><span class="ex">10$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=000,POWER=10  memory_and_walltime.slurm</span>
+<span id="cb16-5"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=000,POWER=20  memory_and_walltime.slurm</span>
+<span id="cb16-6"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=000,POWER=40  memory_and_walltime.slurm</span>
+<span id="cb16-7"><a href=""></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>When job, e.g., 62199204, finished, use <code>sacct</code></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,maxrss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,maxrss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="walltime-benchmark-results" class="slide level2">
@@ -1028,19 +1055,19 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <section id="out-of-time" class="slide level2">
 <h2>Out of time</h2>
 <p>Inspect output for job 62199209</p>
-<div class="sourceCode" id="annotated-cell-17"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-17-1"><a href="#annotated-cell-17-1"></a><span class="ex">...</span></span>
-<span id="annotated-cell-17-2"><a href="#annotated-cell-17-2"></a><span class="ex">Walltime:</span> 00-01:00:00</span>
-<span id="annotated-cell-17-3"><a href="#annotated-cell-17-3"></a><span class="ex">========================================================================</span></span>
-<span id="annotated-cell-17-4"><a href="#annotated-cell-17-4"></a></span>
-<span id="annotated-cell-17-5"><a href="#annotated-cell-17-5"></a><span class="ex">Lmod</span> is automatically replacing <span class="st">"cluster/genius/login"</span> with</span>
-<span id="annotated-cell-17-6"><a href="#annotated-cell-17-6"></a><span class="st">"cluster/wice/batch_sapphirerapids"</span><span class="ex">.</span></span>
-<span id="annotated-cell-17-7"><a href="#annotated-cell-17-7"></a></span>
-<span id="annotated-cell-17-8"><a href="#annotated-cell-17-8"></a><span class="ex">slurmstepd:</span> error: <span class="pp">***</span> JOB 62199209 ON q16c03n1 CANCELLED</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-17" data-target-annotation="1">1</button><span id="annotated-cell-17-9" class="code-annotation-target"><a href="#annotated-cell-17-9"></a><span class="ex">AT</span> 2024-08-13T18:28:16 DUE TO TIME LIMIT <span class="pp">***</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-19"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-19-1"><a href="#annotated-cell-19-1"></a><span class="ex">...</span></span>
+<span id="annotated-cell-19-2"><a href="#annotated-cell-19-2"></a><span class="ex">Walltime:</span> 00-01:00:00</span>
+<span id="annotated-cell-19-3"><a href="#annotated-cell-19-3"></a><span class="ex">========================================================================</span></span>
+<span id="annotated-cell-19-4"><a href="#annotated-cell-19-4"></a></span>
+<span id="annotated-cell-19-5"><a href="#annotated-cell-19-5"></a><span class="ex">Lmod</span> is automatically replacing <span class="st">"cluster/genius/login"</span> with</span>
+<span id="annotated-cell-19-6"><a href="#annotated-cell-19-6"></a><span class="st">"cluster/wice/batch_sapphirerapids"</span><span class="ex">.</span></span>
+<span id="annotated-cell-19-7"><a href="#annotated-cell-19-7"></a></span>
+<span id="annotated-cell-19-8"><a href="#annotated-cell-19-8"></a><span class="ex">slurmstepd:</span> error: <span class="pp">***</span> JOB 62199209 ON q16c03n1 CANCELLED</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="1">1</button><span id="annotated-cell-19-9" class="code-annotation-target"><a href="#annotated-cell-19-9"></a><span class="ex">AT</span> 2024-08-13T18:28:16 DUE TO TIME LIMIT <span class="pp">***</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-17" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-19" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-17" data-code-lines="9" data-code-annotation="1">Oopsie: walltime exceeded requested walltime</span>
+<span data-code-cell="annotated-cell-19" data-code-lines="9" data-code-annotation="1">Oopsie: walltime exceeded requested walltime</span>
 </dd>
 </dl>
 <div class="fragment">
@@ -1111,16 +1138,16 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 </tbody>
 </table>
 </div>
-<div class="sourceCode" id="annotated-cell-18"><pre class="sourceCode numberSource bash fragment code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-18-1"><a href="#annotated-cell-18-1"></a><span class="ex">...</span></span>
-<span id="annotated-cell-18-2"><a href="#annotated-cell-18-2"></a><span class="ex">Walltime:</span> 00-01:00:00</span>
-<span id="annotated-cell-18-3"><a href="#annotated-cell-18-3"></a><span class="ex">========================================================================</span></span>
-<span id="annotated-cell-18-4"><a href="#annotated-cell-18-4"></a><span class="ex">...</span></span>
-<span id="annotated-cell-18-5"><a href="#annotated-cell-18-5"></a><span class="ex">slurmstepd:</span> error: Detected 1 oom_kill event in StepId=62199210.batch.</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="1">1</button><span id="annotated-cell-18-6" class="code-annotation-target"><a href="#annotated-cell-18-6"></a><span class="ex">Some</span> of the step tasks have been OOM Killed.</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-20"><pre class="sourceCode numberSource bash fragment code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-20-1"><a href="#annotated-cell-20-1"></a><span class="ex">...</span></span>
+<span id="annotated-cell-20-2"><a href="#annotated-cell-20-2"></a><span class="ex">Walltime:</span> 00-01:00:00</span>
+<span id="annotated-cell-20-3"><a href="#annotated-cell-20-3"></a><span class="ex">========================================================================</span></span>
+<span id="annotated-cell-20-4"><a href="#annotated-cell-20-4"></a><span class="ex">...</span></span>
+<span id="annotated-cell-20-5"><a href="#annotated-cell-20-5"></a><span class="ex">slurmstepd:</span> error: Detected 1 oom_kill event in StepId=62199210.batch.</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-20" data-target-annotation="1">1</button><span id="annotated-cell-20-6" class="code-annotation-target"><a href="#annotated-cell-20-6"></a><span class="ex">Some</span> of the step tasks have been OOM Killed.</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-18" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-20" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-18" data-code-lines="6" data-code-annotation="1">Oopsie, Out Of Memory (OOM)</span>
+<span data-code-cell="annotated-cell-20" data-code-lines="6" data-code-annotation="1">Oopsie, Out Of Memory (OOM)</span>
 </dd>
 </dl>
 <aside class="notes">
@@ -1145,13 +1172,13 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <li class="fragment">Total memory for job
 <ul>
 <li class="fragment"><p>specify with <code>--mem</code>, e.g.,</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href=""></a><span class="co">#SBATCH --mem=10G</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href=""></a><span class="co">#SBATCH --mem=10G</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li class="fragment"><p><code>--mem</code> &lt; RAM - 8 GB</p></li>
 </ul></li>
 <li class="fragment">Memory per CPU
 <ul>
 <li class="fragment"><p>specify with <code>--mem-per-cpu</code>, e.g.,</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href=""></a><span class="co">#SBATCH --mem-per-cpu=5G</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href=""></a><span class="co">#SBATCH --mem-per-cpu=5G</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li class="fragment"><p><code>--mem-per-cpu</code> <span class="math inline">\(\times\)</span> <code>--cpus-per-task</code> <span class="math inline">\(\times\)</span> <code>--ntasks</code> &lt; RAM - 8 GB</p></li>
 </ul></li>
 </ul>
@@ -1180,12 +1207,12 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <section id="how-much-was-used" class="slide level2">
 <h2>How much was used?</h2>
 <p>Submit with range of values for <code>SIZE</code> and <code>POWER</code>, e.g.,</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=10  memory_and_walltime.slurm</span>
-<span id="cb16-2"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=20  memory_and_walltime.slurm</span>
-<span id="cb16-3"><a href=""></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=10  memory_and_walltime.slurm</span>
+<span id="cb20-2"><a href=""></a><span class="ex">$</span> sbatch  <span class="at">--export</span><span class="op">=</span>ALL,SIZE=5000,POWER=20  memory_and_walltime.slurm</span>
+<span id="cb20-3"><a href=""></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>When job, e.g., 62199204, finished, use <code>sacct</code></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,elapsed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,elapsed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1304,11 +1331,11 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <h2>Implicit parallelism</h2>
 <p>Some R functions/operations are parallel under the hood</p>
 <div class="fragment">
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">25</span>), <span class="at">nrow=</span><span class="dv">5</span>)</span>
-<span id="cb18-2"><a href=""></a>result <span class="ot">&lt;-</span> A</span>
-<span id="cb18-3"><a href=""></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(power<span class="dv">-1</span>)) {</span>
-<span id="cb18-4"><a href=""></a>    result <span class="ot">&lt;-</span> result <span class="sc">%*%</span> A</span>
-<span id="cb18-5"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">25</span>), <span class="at">nrow=</span><span class="dv">5</span>)</span>
+<span id="cb22-2"><a href=""></a>result <span class="ot">&lt;-</span> A</span>
+<span id="cb22-3"><a href=""></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(power<span class="dv">-1</span>)) {</span>
+<span id="cb22-4"><a href=""></a>    result <span class="ot">&lt;-</span> result <span class="sc">%*%</span> A</span>
+<span id="cb22-5"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>How do you know?</p>
@@ -1330,19 +1357,19 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <section id="parallel-or-not" class="slide level2">
 <h2>Parallel or not?</h2>
 <p>Time the execution of R script</p>
-<div class="sourceCode" id="annotated-cell-20"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-20-1"><a href="#annotated-cell-20-1"></a><span class="ex">$</span> time Rscript dgemm.R <span class="op">&amp;&gt;</span> /dev/null</span>
-<span id="annotated-cell-20-2"><a href="#annotated-cell-20-2"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-20" data-target-annotation="1">1</button><span id="annotated-cell-20-3" class="code-annotation-target"><a href="#annotated-cell-20-3"></a><span class="ex">real</span>    0m4.791s</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-20" data-target-annotation="2">2</button><span id="annotated-cell-20-4" class="code-annotation-target"><a href="#annotated-cell-20-4"></a><span class="ex">user</span>    1m21.693s</span>
-<span id="annotated-cell-20-5"><a href="#annotated-cell-20-5"></a><span class="ex">sys</span>     0m31.345s</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-22"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-22-1"><a href="#annotated-cell-22-1"></a><span class="ex">$</span> time Rscript dgemm.R <span class="op">&amp;&gt;</span> /dev/null</span>
+<span id="annotated-cell-22-2"><a href="#annotated-cell-22-2"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="1">1</button><span id="annotated-cell-22-3" class="code-annotation-target"><a href="#annotated-cell-22-3"></a><span class="ex">real</span>    0m4.791s</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="2">2</button><span id="annotated-cell-22-4" class="code-annotation-target"><a href="#annotated-cell-22-4"></a><span class="ex">user</span>    1m21.693s</span>
+<span id="annotated-cell-22-5"><a href="#annotated-cell-22-5"></a><span class="ex">sys</span>     0m31.345s</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-20" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-22" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-20" data-code-lines="3" data-code-annotation="1">Real time, i.e., walltime</span>
+<span data-code-cell="annotated-cell-22" data-code-lines="3" data-code-annotation="1">Real time, i.e., walltime</span>
 </dd>
-<dt data-target-cell="annotated-cell-20" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-22" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-20" data-code-lines="4" data-code-annotation="2">User time, i.e., CPU time used</span>
+<span data-code-cell="annotated-cell-22" data-code-lines="4" data-code-annotation="2">User time, i.e., CPU time used</span>
 </dd>
 </dl>
 <p>82 seconds CPU time in 4.8 seconds walltime… <span class="fragment">parallelism!</span></p>
@@ -1713,7 +1740,7 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <td>24</td>
 <td>74.5</td>
 <td>13.7</td>
-<td>0.</td>
+<td>0.57</td>
 </tr>
 <tr class="even">
 <td>36</td>
@@ -1763,6 +1790,30 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
           display:block!important;
       }</style></aside>
 </section>
+<section id="the-good-news-is" class="slide level2">
+<h2>The good news is…</h2>
+<p>Applications can be</p>
+<ul>
+<li>Memory bound 😒</li>
+<li>CPU bound 😊</li>
+<li>I/O bound 😗</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Benchmark you code!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="why-performance-degradation" class="slide level2">
 <h2>Why performance degradation?</h2>
 <p>It’s the memory architecture, stupid!</p>
@@ -1770,17 +1821,17 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <ul>
 <li>48 core Intel Sapphire Rapids CPU
 <ul>
-<li>L3 cache per socket: 105 MB</li>
+<li>256 GB RAM, 8 memory channels at 4800 MHz</li>
+<li>L3 cache per socket: 105 MB (shared, 2.2 MB per core)</li>
 <li>L2 cache per CPU (core): 2 MB</li>
 <li>L1 cache per CPU (core): 48 kB data</li>
-<li>8 memory channels at 4800 MHz</li>
 </ul></li>
 <li>36 core Intel Icelake
 <ul>
-<li>L3 cache per socket: 54 MB</li>
+<li>256 GB RAM, 8 memory channels at 3200 MHz</li>
+<li>L3 cache per socket: 54 MB (shared, 1.5 MB per core)</li>
 <li>L2 cache per CPU (core): 1.25 MB</li>
 <li>L1 cache per CPU (core): 48 kB data</li>
-<li>8 memory channels at 3200 MHz</li>
 </ul></li>
 </ul>
 </div>
@@ -1796,7 +1847,31 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <li>Can compare multiple commands</li>
 </ul></li>
 <li><p>For completed job</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href=""></a><span class="ex">$</span> sacct <span class="at">--cluster</span><span class="op">=&lt;</span>cluster<span class="op">&gt;</span> --format=JobID,TotalCPU,Elapsed <span class="at">--jobs</span><span class="op">=&lt;</span>job-id<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href=""></a><span class="ex">$</span> sacct <span class="at">--cluster</span><span class="op">=&lt;</span>cluster<span class="op">&gt;</span> --format=JobID,TotalCPU,Elapsed <span class="at">--jobs</span><span class="op">=&lt;</span>job-id<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h2 id="and-another-thing">And another thing…</h2>
+<p>Reading/writing many small files: <span class="fragment">bad idea!</span></p>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>File systems for HPC optimized for large read/write operations, <em>not</em> for many metadata operations!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Use appropriate file types, e.g.,</p>
+<ul>
+<li>HDF5</li>
+<li>Parquet</li>
+</ul>
+</div></li>
 </ul>
 </section></section>
 <section>
@@ -1842,32 +1917,32 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <div class="code-with-filename-file">
 <pre><strong>rprof_wrapper.R</strong></pre>
 </div>
-<div class="sourceCode" id="annotated-cell-36" data-filename="rprof_wrapper.R"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="1">1</button><span id="annotated-cell-36-1" class="code-annotation-target"><a href="#annotated-cell-36-1"></a><span class="fu">Rprof</span>(<span class="at">interval=</span><span class="fl">0.01</span>)</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="2">2</button><span id="annotated-cell-36-2" class="code-annotation-target"><a href="#annotated-cell-36-2"></a><span class="fu">source</span>(<span class="st">"dgemm.R"</span>)</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="3">3</button><span id="annotated-cell-36-3" class="code-annotation-target"><a href="#annotated-cell-36-3"></a><span class="fu">Rprof</span>(<span class="cn">NULL</span>)</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-36" data-target-annotation="4">4</button><span id="annotated-cell-36-4" class="code-annotation-target"><a href="#annotated-cell-36-4"></a><span class="fu">summaryRprof</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-40" data-filename="rprof_wrapper.R"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-40" data-target-annotation="1">1</button><span id="annotated-cell-40-1" class="code-annotation-target"><a href="#annotated-cell-40-1"></a><span class="fu">Rprof</span>(<span class="at">interval=</span><span class="fl">0.01</span>)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-40" data-target-annotation="2">2</button><span id="annotated-cell-40-2" class="code-annotation-target"><a href="#annotated-cell-40-2"></a><span class="fu">source</span>(<span class="st">"dgemm.R"</span>)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-40" data-target-annotation="3">3</button><span id="annotated-cell-40-3" class="code-annotation-target"><a href="#annotated-cell-40-3"></a><span class="fu">Rprof</span>(<span class="cn">NULL</span>)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-40" data-target-annotation="4">4</button><span id="annotated-cell-40-4" class="code-annotation-target"><a href="#annotated-cell-40-4"></a><span class="fu">summaryRprof</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-36" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-40" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-36" data-code-lines="1" data-code-annotation="1">Start profiler</span>
+<span data-code-cell="annotated-cell-40" data-code-lines="1" data-code-annotation="1">Start profiler</span>
 </dd>
-<dt data-target-cell="annotated-cell-36" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-40" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-36" data-code-lines="2" data-code-annotation="2">Run script to profile</span>
+<span data-code-cell="annotated-cell-40" data-code-lines="2" data-code-annotation="2">Run script to profile</span>
 </dd>
-<dt data-target-cell="annotated-cell-36" data-target-annotation="3">3</dt>
+<dt data-target-cell="annotated-cell-40" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-36" data-code-lines="3" data-code-annotation="3">Stop profiler</span>
+<span data-code-cell="annotated-cell-40" data-code-lines="3" data-code-annotation="3">Stop profiler</span>
 </dd>
-<dt data-target-cell="annotated-cell-36" data-target-annotation="4">4</dt>
+<dt data-target-cell="annotated-cell-40" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-36" data-code-lines="4" data-code-annotation="4">Show profile</span>
+<span data-code-cell="annotated-cell-40" data-code-lines="4" data-code-annotation="4">Show profile</span>
 </dd>
 </dl>
 </div><div class="column fragment" style="width:60%;">
 <p>Run script with profiler</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href=""></a><span class="ex">$</span> Rscript rprof_wrapper.R <span class="at">-p</span> 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href=""></a><span class="ex">$</span> Rscript rprof_wrapper.R <span class="at">-p</span> 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -1887,23 +1962,23 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 </section>
 <section id="profile" class="slide level2">
 <h2>Profile</h2>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href=""></a><span class="ex">$</span> Rscript rprof_wrapper.R <span class="at">-p</span> 1</span>
-<span id="cb21-2"><a href=""></a></span>
-<span id="cb21-3"><a href=""></a>                  <span class="ex">self.time</span> self.pct total.time total.pct</span>
-<span id="cb21-4"><a href=""></a><span class="st">"rnorm"</span>                0.81    54.36       0.81     54.36</span>
-<span id="cb21-5"><a href=""></a><span class="st">"%*%"</span>                  0.59    39.60       0.59     39.60</span>
-<span id="cb21-6"><a href=""></a><span class="st">"matrix"</span>               0.04     2.68       0.85     57.05</span>
-<span id="cb21-7"><a href=""></a><span class="st">"lazyLoadDBfetch"</span>      0.03     2.01       0.03      2.01</span>
-<span id="cb21-8"><a href=""></a><span class="st">"frameTypes"</span>           0.02     1.34       0.02      1.34</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash fragment number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href=""></a><span class="ex">$</span> Rscript rprof_wrapper.R <span class="at">-p</span> 10</span>
-<span id="cb22-2"><a href=""></a></span>
-<span id="cb22-3"><a href=""></a>                  <span class="ex">self.time</span> self.pct total.time total.pct</span>
-<span id="cb22-4"><a href=""></a><span class="st">"%*%"</span>                  3.11    76.60       3.11     76.60</span>
-<span id="cb22-5"><a href=""></a><span class="st">"rnorm"</span>                0.86    21.18       0.86     21.18</span>
-<span id="cb22-6"><a href=""></a><span class="st">"matrix"</span>               0.05     1.23       0.91     22.41</span>
-<span id="cb22-7"><a href=""></a><span class="st">"lazyLoadDBfetch"</span>      0.02     0.49       0.02      0.49</span>
-<span id="cb22-8"><a href=""></a><span class="st">"doTryCatch"</span>           0.01     0.25       4.05     99.75</span>
-<span id="cb22-9"><a href=""></a><span class="st">"as.list"</span>              0.01     0.25       0.01      0.25</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href=""></a><span class="ex">$</span> Rscript rprof_wrapper.R <span class="at">-p</span> 1</span>
+<span id="cb25-2"><a href=""></a></span>
+<span id="cb25-3"><a href=""></a>                  <span class="ex">self.time</span> self.pct total.time total.pct</span>
+<span id="cb25-4"><a href=""></a><span class="st">"rnorm"</span>                0.81    54.36       0.81     54.36</span>
+<span id="cb25-5"><a href=""></a><span class="st">"%*%"</span>                  0.59    39.60       0.59     39.60</span>
+<span id="cb25-6"><a href=""></a><span class="st">"matrix"</span>               0.04     2.68       0.85     57.05</span>
+<span id="cb25-7"><a href=""></a><span class="st">"lazyLoadDBfetch"</span>      0.03     2.01       0.03      2.01</span>
+<span id="cb25-8"><a href=""></a><span class="st">"frameTypes"</span>           0.02     1.34       0.02      1.34</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash fragment number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href=""></a><span class="ex">$</span> Rscript rprof_wrapper.R <span class="at">-p</span> 10</span>
+<span id="cb26-2"><a href=""></a></span>
+<span id="cb26-3"><a href=""></a>                  <span class="ex">self.time</span> self.pct total.time total.pct</span>
+<span id="cb26-4"><a href=""></a><span class="st">"%*%"</span>                  3.11    76.60       3.11     76.60</span>
+<span id="cb26-5"><a href=""></a><span class="st">"rnorm"</span>                0.86    21.18       0.86     21.18</span>
+<span id="cb26-6"><a href=""></a><span class="st">"matrix"</span>               0.05     1.23       0.91     22.41</span>
+<span id="cb26-7"><a href=""></a><span class="st">"lazyLoadDBfetch"</span>      0.02     0.49       0.02      0.49</span>
+<span id="cb26-8"><a href=""></a><span class="st">"doTryCatch"</span>           0.01     0.25       4.05     99.75</span>
+<span id="cb26-9"><a href=""></a><span class="st">"as.list"</span>              0.01     0.25       0.01      0.25</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>Spot bottlenecks!</p>
 </div>
