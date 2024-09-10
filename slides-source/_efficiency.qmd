@@ -221,21 +221,34 @@ Results from dgemm/slurm-multicore_gnu_parallel.out
 :::
 
 
+## The good news is...
+
+Applications can be
+
+- Memory bound 😒
+- CPU bound 😊
+- I/O bound 😗
+
+::: {.callout-warning .fragment}
+Benchmark you code!
+:::
+
+
 ## Why performance degradation?
 
 It's the memory architecture, stupid!
 
 ::: {style="font-size: 80%;"}
 - 48 core Intel Sapphire Rapids CPU
-  - L3 cache per socket: 105 MB
+  - 256 GB RAM, 8 memory channels at 4800 MHz
+  - L3 cache per socket: 105 MB (shared, 2.2 MB per core)
   - L2 cache per CPU (core): 2 MB
   - L1 cache per CPU (core): 48 kB data
-  - 8 memory channels at 4800 MHz
 - 36 core Intel Icelake
-  - L3 cache per socket: 54 MB
+  - 256 GB RAM, 8 memory channels at 3200 MHz
+  - L3 cache per socket: 54 MB (shared, 1.5 MB per core)
   - L2 cache per CPU (core): 1.25 MB
   - L1 cache per CPU (core): 48 kB data
-  - 8 memory channels at 3200 MHz
 :::
 
 
@@ -250,3 +263,20 @@ It's the memory architecture, stupid!
   ```bash
   $ sacct --cluster=<cluster> --format=JobID,TotalCPU,Elapsed --jobs=<job-id>
   ```
+
+
+  ## And another thing...
+
+  Reading/writing many small files: [bad idea!]{.fragment}
+
+  ::: {.callout-warning .fragment}
+  File systems for HPC optimized for large read/write operations, *not* for
+  many metadata operations!
+  :::
+
+  ::: {.fragment}
+  Use appropriate file types, e.g.,
+
+  - HDF5
+  - Parquet
+  :::
