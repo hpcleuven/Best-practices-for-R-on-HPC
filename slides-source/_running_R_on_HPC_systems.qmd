@@ -296,7 +296,11 @@ Rscript ./weather_analysis.R  \
 ## But wait, there is no `optparse`!
 
 ::: {.incremental}
-- Not all packages are installed on HPC systems
+- Many available through `R-bundle-CRAN` module
+  ```bash
+  $ module load R-bundle-CRAN/2023.12-foss-2023a
+  ```
+- Not all packages are installed though
 - Install packages in VSC_DATA directory
   - Pure R/no depencies on external libraries: easy
   - Other packages: more difficult, use modules
@@ -304,41 +308,61 @@ Rscript ./weather_analysis.R  \
 :::
 
 
-## Prepare environment
-
-Create package directory for cluster/architecture/R version
-```bash
-$ mkdir -p $VSC_DATA/R/wice/sapphirerapics/4.4
-```
-Only once per cluster/architecture/R version!
-
-::: {.fragment}
-Create R environment file in `$VSC_HOME`
-```bash
-$ echo "R_LIBS_USER=$VSC_DATA/R/wice/sapphirerapics/4.4" \
-     > $VSC_HOME/.Renviron
-```
-Works only for specified cluster/architecture/R version!
-:::
-
-
-## Install packages
+## Install procedure
 
 Start interactive job on cluster wice
 ```bash
 $ srun --account=lpt2_sysadmin --time=00:30:00 \
       --cluster=wice --partition=batch_sapphirerapids \
       --pty /bin/bash -l
-
 ```
 
 ::: {.fragment}
+Load
+
+- R module
+  ```bash
+  $ module load R/4.4.0-gfbf-2023a
+  ```
+- or `R-bundle-CRAN` module
+  ```bash
+  $ module load R-bundle-CRAN/2023.12-foss-2023a
+  ```   
+:::
+
+
+## Prepare environment
+
+Define environment variable
+```bash
+$ export R_LIBS_USER=$VSC_DATA/R/$VSC_ARCH_LOCAL/$EBVERSIONR
+```
+
+Create package directory for cluster/architecture/R version
+```bash
+$ mkdir -p $R_LIBS_USER
+```
+Only once per cluster/architecture/R version!
+
+::: {.fragment}
+Create `.Renviron` file in `$VSC_HOME`
+```bash
+$ echo "R_LIBS_USER=$R_LIBS_USER" > $VSC_HOME/.Renviron
+```
+Works only for specified cluster/architecture/R version!
+:::
+
+
+## Actual installation
+
 Install the package(s)
 ```bash
-$ module load R/4.4.0-gfbf-2023a
 $ R
 > install.packages("optparse")
 ```
+
+::: {.callout-tip .fragment}
+Use `renv` for managing R environments and dependencies
 :::
 
 ::: {.fragment}
