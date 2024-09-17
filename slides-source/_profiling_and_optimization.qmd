@@ -58,7 +58,9 @@ $ Rscript rprof_wrapper.R -p 1
 "frameTypes"           0.02     1.34       0.02      1.34
 ```
 
-```{.bash .fragment}
+. . .
+
+```{.bash}
 $ Rscript rprof_wrapper.R -p 10
 
                   self.time self.pct total.time total.pct
