@@ -196,9 +196,9 @@ library(optparse)                                              # <1>
 # Define the options
 option_list <- list(                                           # <2>
   make_option(c("--name"), type="character", default="World",  # <3>
-              help="Name to greet"),
+              help="Name to greet"),                           # <3>
   make_option(c("--count"), type="integer", default=1,         # <4>
-              help="Number of times to greet")
+              help="Number of times to greet")                 # <4>
 )
 opt <- parse_args(OptionParser(option_list=option_list))        # <5>
 
@@ -235,6 +235,7 @@ Rscript ./hello_world_cla.R  --name "Bob"  --count 3
 Easiest option: relative paths
 
 ```bash
+$ cd weather-analysis
 $ Rscript ./weather_analysis.R  \
       --input data/London.csv   \            # <1>
       --quantity temp_max       \
@@ -243,6 +244,14 @@ $ Rscript ./weather_analysis.R  \
 
 1. Input file in `data` directory, subdirectory of script's directory
 2. Output file in script's directory
+
+
+::: {.callout-warning}
+The paths should be relative to the location you run your script from!
+
+(In this case, "weather-analysis")
+:::
+
 
 ## R script {visibility=hidden}
 
