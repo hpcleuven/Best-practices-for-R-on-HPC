@@ -953,20 +953,22 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 </section>
 <section id="how-long-will-your-job-run" class="slide level2">
 <h2>How long will your job run?</h2>
+<div>
 <ul>
-<li>Specify walltime (<code>--time=HH:MM:SS</code>)</li>
-<li>But how much?
+<li class="fragment">Specify walltime (<code>--time=HH:MM:SS</code>)</li>
+<li class="fragment">But how much?
 <ul>
-<li>Don’t underestimate!</li>
-<li>Don’t (massively) overestimate</li>
+<li class="fragment">Don’t underestimate!</li>
+<li class="fragment">Don’t (massively) overestimate</li>
 </ul></li>
-<li>Experiment
+<li class="fragment">Experiment
 <ul>
-<li>Start with “small” problem</li>
-<li>Increase problem size gradually</li>
-<li>Extrapolate to real problem</li>
+<li class="fragment">Start with “small” problem</li>
+<li class="fragment">Increase problem size gradually</li>
+<li class="fragment">Extrapolate to real problem</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="running-example" class="slide level2">
 <h2>Running example</h2>
@@ -975,9 +977,11 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 <li>takes argument <span class="math inline">\(N\)</span> and <span class="math inline">\(p\)</span></li>
 <li>generates matrix <span class="math inline">\(A \in \mathbb{R}^{N \times N}\)</span>, elements normally distributed</li>
 <li>computes <span class="math inline">\(A^p\)</span></li>
-<li>determiness minimum and maximum diagonal element</li>
+<li>determines minimum and maximum diagonal element</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash fragment number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href=""></a><span class="ex">Rscript</span> dgemm.R  <span class="at">--size</span> 1000  <span class="at">--power</span> 15</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href=""></a><span class="ex">Rscript</span> dgemm.R  <span class="at">--size</span> 1000  <span class="at">--power</span> 15</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="benchmark-job-script" class="slide level2">
 <h2>Benchmark job script</h2>
@@ -1018,7 +1022,7 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 <span id="cb16-7"><a href=""></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>When job, e.g., 62199204, finished, use <code>sacct</code></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,maxrss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,elapsed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="walltime-benchmark-results" class="slide level2">
@@ -1123,19 +1127,19 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 <section id="out-of-time" class="slide level2">
 <h2>Out of time</h2>
 <p>Inspect output for job 62199209</p>
-<div class="sourceCode" id="annotated-cell-20"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-20-1"><a href="#annotated-cell-20-1"></a><span class="ex">...</span></span>
-<span id="annotated-cell-20-2"><a href="#annotated-cell-20-2"></a><span class="ex">Walltime:</span> 00-01:00:00</span>
-<span id="annotated-cell-20-3"><a href="#annotated-cell-20-3"></a><span class="ex">========================================================================</span></span>
-<span id="annotated-cell-20-4"><a href="#annotated-cell-20-4"></a></span>
-<span id="annotated-cell-20-5"><a href="#annotated-cell-20-5"></a><span class="ex">Lmod</span> is automatically replacing <span class="st">"cluster/genius/login"</span> with</span>
-<span id="annotated-cell-20-6"><a href="#annotated-cell-20-6"></a><span class="st">"cluster/wice/batch_sapphirerapids"</span><span class="ex">.</span></span>
-<span id="annotated-cell-20-7"><a href="#annotated-cell-20-7"></a></span>
-<span id="annotated-cell-20-8"><a href="#annotated-cell-20-8"></a><span class="ex">slurmstepd:</span> error: <span class="pp">***</span> JOB 62199209 ON q16c03n1 CANCELLED</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-20" data-target-annotation="1">1</button><span id="annotated-cell-20-9" class="code-annotation-target"><a href="#annotated-cell-20-9"></a><span class="ex">AT</span> 2024-08-13T18:28:16 DUE TO TIME LIMIT <span class="pp">***</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-21"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-21-1"><a href="#annotated-cell-21-1"></a><span class="ex">...</span></span>
+<span id="annotated-cell-21-2"><a href="#annotated-cell-21-2"></a><span class="ex">Walltime:</span> 00-01:00:00</span>
+<span id="annotated-cell-21-3"><a href="#annotated-cell-21-3"></a><span class="ex">========================================================================</span></span>
+<span id="annotated-cell-21-4"><a href="#annotated-cell-21-4"></a></span>
+<span id="annotated-cell-21-5"><a href="#annotated-cell-21-5"></a><span class="ex">Lmod</span> is automatically replacing <span class="st">"cluster/genius/login"</span> with</span>
+<span id="annotated-cell-21-6"><a href="#annotated-cell-21-6"></a><span class="st">"cluster/wice/batch_sapphirerapids"</span><span class="ex">.</span></span>
+<span id="annotated-cell-21-7"><a href="#annotated-cell-21-7"></a></span>
+<span id="annotated-cell-21-8"><a href="#annotated-cell-21-8"></a><span class="ex">slurmstepd:</span> error: <span class="pp">***</span> JOB 62199209 ON q16c03n1 CANCELLED</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="1">1</button><span id="annotated-cell-21-9" class="code-annotation-target"><a href="#annotated-cell-21-9"></a><span class="ex">AT</span> 2024-08-13T18:28:16 DUE TO TIME LIMIT <span class="pp">***</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-20" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-21" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-20" data-code-lines="9" data-code-annotation="1">Oopsie: walltime exceeded requested walltime</span>
+<span data-code-cell="annotated-cell-21" data-code-lines="9" data-code-annotation="1">Oopsie: walltime exceeded requested walltime</span>
 </dd>
 </dl>
 <div class="fragment">
@@ -1206,16 +1210,16 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 </tbody>
 </table>
 </div>
-<div class="sourceCode" id="annotated-cell-21"><pre class="sourceCode numberSource bash fragment code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-21-1"><a href="#annotated-cell-21-1"></a><span class="ex">...</span></span>
-<span id="annotated-cell-21-2"><a href="#annotated-cell-21-2"></a><span class="ex">Walltime:</span> 00-01:00:00</span>
-<span id="annotated-cell-21-3"><a href="#annotated-cell-21-3"></a><span class="ex">========================================================================</span></span>
-<span id="annotated-cell-21-4"><a href="#annotated-cell-21-4"></a><span class="ex">...</span></span>
-<span id="annotated-cell-21-5"><a href="#annotated-cell-21-5"></a><span class="ex">slurmstepd:</span> error: Detected 1 oom_kill event in StepId=62199210.batch.</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="1">1</button><span id="annotated-cell-21-6" class="code-annotation-target"><a href="#annotated-cell-21-6"></a><span class="ex">Some</span> of the step tasks have been OOM Killed.</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-22"><pre class="sourceCode numberSource bash fragment code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-22-1"><a href="#annotated-cell-22-1"></a><span class="ex">...</span></span>
+<span id="annotated-cell-22-2"><a href="#annotated-cell-22-2"></a><span class="ex">Walltime:</span> 00-01:00:00</span>
+<span id="annotated-cell-22-3"><a href="#annotated-cell-22-3"></a><span class="ex">========================================================================</span></span>
+<span id="annotated-cell-22-4"><a href="#annotated-cell-22-4"></a><span class="ex">...</span></span>
+<span id="annotated-cell-22-5"><a href="#annotated-cell-22-5"></a><span class="ex">slurmstepd:</span> error: Detected 1 oom_kill event in StepId=62199210.batch.</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="1">1</button><span id="annotated-cell-22-6" class="code-annotation-target"><a href="#annotated-cell-22-6"></a><span class="ex">Some</span> of the step tasks have been OOM Killed.</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-21" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-22" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-21" data-code-lines="6" data-code-annotation="1">Oopsie, Out Of Memory (OOM)</span>
+<span data-code-cell="annotated-cell-22" data-code-lines="6" data-code-annotation="1">Oopsie, Out Of Memory (OOM)</span>
 </dd>
 </dl>
 <aside class="notes">
@@ -1234,7 +1238,7 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 </section>
 <section id="memory" class="slide level2">
 <h2>Memory</h2>
-<p><em>Check</em> RAM of node in docs, typically 256 GB</p>
+<p><em>Check</em> RAM of node in <a href="https://docs.vscentrum.be/hardware.html">docs</a>, typically 256 GB</p>
 <div style="font-size: 85%;">
 <ul>
 <li class="fragment">Total memory for job
@@ -1257,20 +1261,22 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 </section>
 <section id="how-much-memory-do-you-need" class="slide level2">
 <h2>How much memory do you need?</h2>
+<div>
 <ul>
-<li>Specify memory (<code>--mem=30</code>)</li>
-<li>But how much?
+<li class="fragment">Specify memory (<code>--mem=30</code>)</li>
+<li class="fragment">But how much?
 <ul>
-<li>Don’t underestimate!</li>
-<li>Don’t (massively) overestimate</li>
+<li class="fragment">Don’t underestimate!</li>
+<li class="fragment">Don’t (massively) overestimate</li>
 </ul></li>
-<li>Experiment
+<li class="fragment">Experiment
 <ul>
-<li>Start with “small” problem</li>
-<li>Increase problem size gradually</li>
-<li>Extrapolate to real problem</li>
+<li class="fragment">Start with “small” problem</li>
+<li class="fragment">Increase problem size gradually</li>
+<li class="fragment">Extrapolate to real problem</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="how-much-was-used" class="slide level2">
 <h2>How much was used?</h2>
@@ -1280,7 +1286,7 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 <span id="cb20-3"><a href=""></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>When job, e.g., 62199204, finished, use <code>sacct</code></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,elapsed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,maxrss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1379,16 +1385,36 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 </section>
 <section id="summary-walltime-memory" class="slide level2">
 <h2>Summary walltime &amp; memory</h2>
-<ul>
-<li><em>Do not underestimate!</em>
-<ul>
-<li>You will waste resource</li>
-</ul></li>
-<li>Benchmark for walltime and memory
-<ul>
-<li>Unless cost of benchmarking is higher than production cost</li>
-</ul></li>
-</ul>
+<p><em>Do not underestimate!</em></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>You will waste resource</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Benchmark for walltime and memory</p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Unless cost of benchmarking is higher than production cost</p>
+</div>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="efficiency" class="title-slide slide level1 center">
@@ -1425,19 +1451,19 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 <section id="parallel-or-not" class="slide level2">
 <h2>Parallel or not?</h2>
 <p>Time the execution of R script</p>
-<div class="sourceCode" id="annotated-cell-23"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-23-1"><a href="#annotated-cell-23-1"></a><span class="ex">$</span> time Rscript dgemm.R <span class="op">&amp;&gt;</span> /dev/null</span>
-<span id="annotated-cell-23-2"><a href="#annotated-cell-23-2"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-23" data-target-annotation="1">1</button><span id="annotated-cell-23-3" class="code-annotation-target"><a href="#annotated-cell-23-3"></a><span class="ex">real</span>    0m4.791s</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-23" data-target-annotation="2">2</button><span id="annotated-cell-23-4" class="code-annotation-target"><a href="#annotated-cell-23-4"></a><span class="ex">user</span>    1m21.693s</span>
-<span id="annotated-cell-23-5"><a href="#annotated-cell-23-5"></a><span class="ex">sys</span>     0m31.345s</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-25"><pre class="sourceCode numberSource bash code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-25-1"><a href="#annotated-cell-25-1"></a><span class="ex">$</span> time Rscript dgemm.R <span class="op">&amp;&gt;</span> /dev/null</span>
+<span id="annotated-cell-25-2"><a href="#annotated-cell-25-2"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="1">1</button><span id="annotated-cell-25-3" class="code-annotation-target"><a href="#annotated-cell-25-3"></a><span class="ex">real</span>    0m4.791s</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="2">2</button><span id="annotated-cell-25-4" class="code-annotation-target"><a href="#annotated-cell-25-4"></a><span class="ex">user</span>    1m21.693s</span>
+<span id="annotated-cell-25-5"><a href="#annotated-cell-25-5"></a><span class="ex">sys</span>     0m31.345s</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-23" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-25" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-23" data-code-lines="3" data-code-annotation="1">Real time, i.e., walltime</span>
+<span data-code-cell="annotated-cell-25" data-code-lines="3" data-code-annotation="1">Real time, i.e., walltime</span>
 </dd>
-<dt data-target-cell="annotated-cell-23" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-25" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-23" data-code-lines="4" data-code-annotation="2">User time, i.e., CPU time used</span>
+<span data-code-cell="annotated-cell-25" data-code-lines="4" data-code-annotation="2">User time, i.e., CPU time used</span>
 </dd>
 </dl>
 <p>82 seconds CPU time in 4.8 seconds walltime… <span class="fragment">parallelism!</span></p>
