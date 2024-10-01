@@ -265,18 +265,18 @@ It's the memory architecture, stupid!
   ```
 
 
-  ## And another thing...
+## And another thing...
 
-  Reading/writing many small files: [bad idea!]{.fragment}
+Reading/writing many small files: [bad idea!]{.fragment}
 
-  ::: {.callout-warning .fragment}
-  File systems for HPC optimized for large read/write operations, *not* for
-  many metadata operations!
-  :::
+::: {.callout-warning .fragment}
+File systems for HPC optimized for large read/write operations, *not* for
+many metadata operations!
+:::
 
-  ::: {.fragment}
-  Use appropriate file types, e.g.,
+::: {.fragment}
+Use appropriate file types, e.g.,
 
-  - HDF5
-  - Parquet
-  :::
+- HDF5
+- Parquet
+:::

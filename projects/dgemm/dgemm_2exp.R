@@ -55,7 +55,7 @@ matrix_power <- function(A, power) {
         if (i > 1) {
             A_power <- A_power %*% A_power
         }
-        if (bits[i] == 1) {
+        if (bits[[i]] == 1) {
             result <- result %*% A_power
         }
     }

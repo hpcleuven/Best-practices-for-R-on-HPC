@@ -1,6 +1,6 @@
 ---
 title: "Best practices for R on HPC"
-author: "Mariana Montes, Ehsan Moravveji, Geert Jan Bex"
+author: "Geert Jan Bex, Ehsan Moravveji, Mariana Montes"
 institution: "Vlaams Supercomputer Centrum"
 date: today
 format:
@@ -15,7 +15,7 @@ title-slide-attributes:
 code-annotations: select
 ---
 
-## Overview
+## Overview {.smaller}
 
 - Motivation
 - How to run R on HPC systems

@@ -29,7 +29,7 @@ Rscript dgemm.R  --size 1000  --power 15
 
 ##  Benchmark job script
 
-```{.bash filename="memory_and_walltime.slurm}
+```{.bash filename=memory_and_walltime.slurm}
 #!/usr/bin/env -S bash -l
 #SBATCH --account=lpt2_sysadmin
 #SBATCH --nodes=1
@@ -56,9 +56,9 @@ Submit with range of values for `SIZE` and `POWER`, e.g.,
 $ sbatch  --export=ALL,SIZE=5000,POWER=10  memory_and_walltime.slurm
 $ sbatch  --export=ALL,SIZE=5000,POWER=20  memory_and_walltime.slurm
 $ sbatch  --export=ALL,SIZE=5000,POWER=40  memory_and_walltime.slurm
-10$ sbatch  --export=ALL,SIZE=000,POWER=10  memory_and_walltime.slurm
-$ sbatch  --export=ALL,SIZE=000,POWER=20  memory_and_walltime.slurm
-$ sbatch  --export=ALL,SIZE=000,POWER=40  memory_and_walltime.slurm
+$ sbatch  --export=ALL,SIZE=10000,POWER=10  memory_and_walltime.slurm
+$ sbatch  --export=ALL,SIZE=10000,POWER=20  memory_and_walltime.slurm
+$ sbatch  --export=ALL,SIZE=10000,POWER=40  memory_and_walltime.slurm
 ...
 ```
 
@@ -230,7 +230,7 @@ Combine walltime and memory benchmark!
 ::::
 :::: {.column width=50% .fragment .incremental}
 - $M(N, p) \propto N^2$
-- $M(N, p)$ contant in $p$
+- $M(N, p)$ constant in $p$
 ::::
 :::::
 
