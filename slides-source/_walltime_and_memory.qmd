@@ -3,6 +3,7 @@
 
 ## How long will your job run?
 
+::: {.incremental}
 - Specify walltime (`--time=HH:MM:SS`)
 - But how much?
   - Don't underestimate!
@@ -11,6 +12,7 @@
   - Start with "small" problem
   - Increase problem size gradually
   - Extrapolate to real problem
+:::
 
 
 ## Running example
@@ -20,16 +22,18 @@ R script `dgemm.R`
 - takes argument $N$ and $p$
 - generates matrix $A \in \mathbb{R}^{N \times N}$, elements normally distributed
 - computes $A^p$
-- determiness minimum and maximum diagonal element
+- determines minimum and maximum diagonal element
 
-```{.bash .fragment}
+. . .
+
+```{.bash}
 Rscript dgemm.R  --size 1000  --power 15
 ```
 
 
 ##  Benchmark job script
 
-```{.bash filename="memory_and_walltime.slurm}
+```{.bash filename=memory_and_walltime.slurm}
 #!/usr/bin/env -S bash -l
 #SBATCH --account=lpt2_sysadmin
 #SBATCH --nodes=1
@@ -56,18 +60,19 @@ Submit with range of values for `SIZE` and `POWER`, e.g.,
 $ sbatch  --export=ALL,SIZE=5000,POWER=10  memory_and_walltime.slurm
 $ sbatch  --export=ALL,SIZE=5000,POWER=20  memory_and_walltime.slurm
 $ sbatch  --export=ALL,SIZE=5000,POWER=40  memory_and_walltime.slurm
-10$ sbatch  --export=ALL,SIZE=000,POWER=10  memory_and_walltime.slurm
-$ sbatch  --export=ALL,SIZE=000,POWER=20  memory_and_walltime.slurm
-$ sbatch  --export=ALL,SIZE=000,POWER=40  memory_and_walltime.slurm
+$ sbatch  --export=ALL,SIZE=10000,POWER=10  memory_and_walltime.slurm
+$ sbatch  --export=ALL,SIZE=10000,POWER=20  memory_and_walltime.slurm
+$ sbatch  --export=ALL,SIZE=10000,POWER=40  memory_and_walltime.slurm
 ...
 ```
 
-::: {.fragment}
+. . .
+
 When job, e.g., 62199204, finished, use `sacct`
 ```bash
-$ sacct  --cluster=wice  --jobs=62199204.batch  --format=jobid,maxrss
+$ sacct  --cluster=wice  --jobs=62199204.batch  --format=jobid,elapsed
 ```
-:::
+
 
 ## Walltime benchmark results
 
@@ -154,7 +159,8 @@ takes approximately 260 seconds.
 
 ## Memory
 
-*Check* RAM of node in docs, typically 256 GB
+*Check* RAM of node in [docs](https://docs.vscentrum.be/hardware.html),
+typically 256 GB
 
 ::: {.incremental style="font-size: 85%;"}
 - Total memory for job
@@ -178,6 +184,7 @@ Units: `K`, `M`, `G`, `T`
 
 ## How much memory do you need?
 
+::: {.incremental}
 - Specify memory (`--mem=30`)
 - But how much?
   - Don't underestimate!
@@ -186,6 +193,7 @@ Units: `K`, `M`, `G`, `T`
   - Start with "small" problem
   - Increase problem size gradually
   - Extrapolate to real problem
+:::
 
 
 ## How much was used?
@@ -198,14 +206,16 @@ $ sbatch  --export=ALL,SIZE=5000,POWER=20  memory_and_walltime.slurm
 ...
 ```
 
-::: {.fragment}
+. . .
+
 When job, e.g., 62199204, finished, use `sacct`
 ```bash
-$ sacct  --cluster=wice  --jobs=62199204.batch  --format=jobid,elapsed
+$ sacct  --cluster=wice  --jobs=62199204.batch  --format=jobid,maxrss
 ```
-:::
 
-::: {.callout-tip .fragment}
+. . .
+
+::: {.callout-tip}
 Combine walltime and memory benchmark!
 :::
 
@@ -230,14 +240,23 @@ Combine walltime and memory benchmark!
 ::::
 :::: {.column width=50% .fragment .incremental}
 - $M(N, p) \propto N^2$
-- $M(N, p)$ contant in $p$
+- $M(N, p)$ constant in $p$
 ::::
 :::::
 
 
 ## Summary walltime & memory
 
-- *Do not underestimate!*
-  - You will waste resource
-- Benchmark for walltime and memory
-  - Unless cost of benchmarking is higher than production cost
+*Do not underestimate!*
+
+::: {.callout-warning}
+You will waste resource
+:::
+
+. . .
+
+Benchmark for walltime and memory
+
+::: {.callout-warning}
+Unless cost of benchmarking is higher than production cost
+:::

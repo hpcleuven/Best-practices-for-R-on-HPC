@@ -129,7 +129,7 @@ Submitted batch job 62136541 on cluster wice     # <2>
 
 Show all your jobs on cluster wice:
 
-::: {.small}
+::: {style="font-size: 90%;"}
 ```bash
 $ squeue --cluster=wice
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
@@ -137,17 +137,17 @@ $ squeue --cluster=wice
 ```
 :::
 
-::: {.fragment}
+. . .
+
 `ST` is the job state:
 
 - `PD`: pending
 - `R`: running
 - `CG`: completing
-:::
 
-::: {.fragment}
+. . .
+
 No jobs shown? All done!
-:::
 
 
 ## Job output
@@ -196,11 +196,11 @@ library(optparse)                                              # <1>
 # Define the options
 option_list <- list(                                           # <2>
   make_option(c("--name"), type="character", default="World",  # <3>
-              help="Name to greet"),
+              help="Name to greet"),                           # <3>
   make_option(c("--count"), type="integer", default=1,         # <4>
-              help="Number of times to greet")
+              help="Number of times to greet")                 # <4>
 )
-opt <- parse_args(OptionParser(option_list=option_list))        # <5>
+opt <- parse_args(OptionParser(option_list=option_list))       # <5>
 
 for (i in 1:opt$count) {                                       # <6>
   cat("Hello", opt$name, "!\n")
@@ -209,8 +209,8 @@ for (i in 1:opt$count) {                                       # <6>
 
 1. Load the `optparse` package
 2. Define the options
-3. Option for the name
-4. Option for the count
+3. Option for the name, `character` type, default value "World"
+4. Option for the count, `integer` type, default value 1
 5. Parse the arguments
 6. Use the arguments in list `opt`
 
@@ -244,9 +244,18 @@ $ Rscript ./weather_analysis.R  \
 1. Input file in `data` directory, subdirectory of script's directory
 2. Output file in script's directory
 
-## R script {visibility=hidden}
+. . .
 
-```{.r filename="weather_analysis.R"}
+::: {.callout-warning}
+Paths are relative to location you run script from!
+
+Here: directory that contains `weather_analysis.R`
+:::
+
+
+## R script for weather analysis
+
+```{.r filename="weather_analysis.R" style="font-size: 85%;"}
 library(optparse)
 option_list <- list(
     make_option(c("-i", "--input"), type = "character",
@@ -267,9 +276,10 @@ colnames(monthly_avg) <- c("Month", "Average")
 write.csv(monthly_avg, file = opt$output, row.names = FALSE)
 ```
 
-## Job script {visibility=hidden}
 
-```{.bash filename="weather_analysis.slurm"}
+## Job script for weather analysis
+
+```{.bash filename="weather_analysis.slurm" style="font-size: 85%;"}
 #!/usr/bin/env -S bash -l
 #SBATCH --account=lpt2_sysadmin
 #SBATCH --time=00:02:00
@@ -301,14 +311,14 @@ Rscript ./weather_analysis.R  \
   $ module load R-bundle-CRAN/2023.12-foss-2023a
   ```
 - Not all packages are installed though
-- Install packages in VSC_DATA directory
+- Install packages in `VSC_DATA` directory
   - Pure R/no depencies on external libraries: easy
   - Other packages: more difficult, use modules
 - Packages specific for R major version/cluster/architecture
 :::
 
 
-## Install procedure
+## Installation procedure
 
 Start interactive job on cluster wice
 ```bash
@@ -344,13 +354,13 @@ $ mkdir -p $R_LIBS_USER
 ```
 Only once per cluster/architecture/R version!
 
-::: {.fragment}
+. . .
+
 Create `.Renviron` file in `$VSC_HOME`
 ```bash
 $ echo "R_LIBS_USER=$R_LIBS_USER" > $VSC_HOME/.Renviron
 ```
 Works only for specified cluster/architecture/R version!
-:::
 
 
 ## Actual installation
@@ -361,14 +371,16 @@ $ R
 > install.packages("optparse")
 ```
 
-::: {.callout-tip .fragment}
+. . .
+
+::: {.callout-tip}
 Use `renv` for managing R environments and dependencies
 :::
 
-::: {.fragment}
+. . .
+
 If you have trouble, contact the HPC helpdesk, specify
 
 - packages to install
 - R version
 - cluster and architecture
-:::
