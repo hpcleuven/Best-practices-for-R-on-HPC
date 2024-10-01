@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Mariana Montes, Ehsan Moravveji, Geert Jan Bex">
-  <meta name="dcterms.date" content="2024-09-10">
+  <meta name="dcterms.date" content="2024-10-01">
   <title>Best practices for R on HPC</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -402,7 +402,7 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 </div>
 </div>
 
-  <p class="date">2024-09-10</p>
+  <p class="date">2024-10-01</p>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
@@ -713,11 +713,11 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <h2>Runtime parameters</h2>
 <p>Scenario: run R script with different parameters</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="ex">$</span> Rscript hello_world_cla.R  <span class="at">--name</span> <span class="st">"Alice"</span></span>
-<span id="cb3-2"><a href=""></a><span class="ex">Hello</span> from Alice !</span>
+<span id="cb3-2"><a href=""></a><span class="ex">Hello</span> Alice !</span>
 <span id="cb3-3"><a href=""></a><span class="ex">$</span> Rscript hello_world_cla.R  <span class="at">--name</span> <span class="st">"Bob"</span>  <span class="at">--count</span> 3</span>
-<span id="cb3-4"><a href=""></a><span class="ex">Hello</span> from Bob !</span>
-<span id="cb3-5"><a href=""></a><span class="ex">Hello</span> from Bob !</span>
-<span id="cb3-6"><a href=""></a><span class="ex">Hello</span> from Bob !</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href=""></a><span class="ex">Hello</span> Bob !</span>
+<span id="cb3-5"><a href=""></a><span class="ex">Hello</span> Bob !</span>
+<span id="cb3-6"><a href=""></a><span class="ex">Hello</span> Bob !</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="optparse-package" class="slide level2">
 <h2><code>optparse</code> package</h2>
@@ -737,7 +737,7 @@ Mariana Montes, Ehsan Moravveji, Geert Jan Bex
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="5">5</button><span id="annotated-cell-7-10" class="code-annotation-target"><a href="#annotated-cell-7-10"></a>opt <span class="ot">&lt;-</span> <span class="fu">parse_args</span>(<span class="fu">OptionParser</span>(<span class="at">option_list=</span>option_list))</span>
 <span id="annotated-cell-7-11"><a href="#annotated-cell-7-11"></a></span>
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="6">6</button><span id="annotated-cell-7-12" class="code-annotation-target"><a href="#annotated-cell-7-12"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>opt<span class="sc">$</span>count) {</span>
-<span id="annotated-cell-7-13"><a href="#annotated-cell-7-13"></a>  <span class="fu">cat</span>(<span class="st">"Hello from"</span>, opt<span class="sc">$</span>name, <span class="st">"!</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="annotated-cell-7-13"><a href="#annotated-cell-7-13"></a>  <span class="fu">cat</span>(<span class="st">"Hello"</span>, opt<span class="sc">$</span>name, <span class="st">"!</span><span class="sc">\n</span><span class="st">"</span>)</span>
 <span id="annotated-cell-7-14"><a href="#annotated-cell-7-14"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">

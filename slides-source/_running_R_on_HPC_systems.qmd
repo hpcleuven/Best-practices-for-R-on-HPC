@@ -180,11 +180,11 @@ Scenario: run R script with different parameters
 
 ```bash
 $ Rscript hello_world_cla.R  --name "Alice"
-Hello from Alice !
+Hello Alice !
 $ Rscript hello_world_cla.R  --name "Bob"  --count 3
-Hello from Bob !
-Hello from Bob !
-Hello from Bob !
+Hello Bob !
+Hello Bob !
+Hello Bob !
 ```
 
 
@@ -203,7 +203,7 @@ option_list <- list(                                           # <2>
 opt <- parse_args(OptionParser(option_list=option_list))        # <5>
 
 for (i in 1:opt$count) {                                       # <6>
-  cat("Hello from", opt$name, "!\n")
+  cat("Hello", opt$name, "!\n")
 }
 ```
 
