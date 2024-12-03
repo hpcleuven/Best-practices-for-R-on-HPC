@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Geert Jan Bex, Ehsan Moravveji, Mariana Montes">
-  <meta name="dcterms.date" content="2024-10-01">
+  <meta name="dcterms.date" content="2024-12-03">
   <title>Best practices for R on HPC</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -402,7 +402,7 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 </div>
 </div>
 
-  <p class="date">2024-10-01</p>
+  <p class="date">2024-12-03</p>
 </section>
 <section id="overview" class="slide level2 smaller">
 <h2>Overview</h2>
@@ -1286,7 +1286,8 @@ Geert Jan Bex, Ehsan Moravveji, Mariana Montes
 <span id="cb20-3"><a href=""></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>When job, e.g., 62199204, finished, use <code>sacct</code></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="at">--format</span><span class="op">=</span>jobid,maxrss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href=""></a><span class="ex">$</span> sacct  <span class="at">--cluster</span><span class="op">=</span>wice  <span class="at">--jobs</span><span class="op">=</span>62199204.batch  <span class="dt">\</span></span>
+<span id="cb21-2"><a href=""></a>         <span class="at">--format</span><span class="op">=</span>jobid,maxrss,maxvmsize</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
