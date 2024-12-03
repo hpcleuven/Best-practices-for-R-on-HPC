@@ -210,7 +210,7 @@ $ sbatch  --export=ALL,SIZE=5000,POWER=20  memory_and_walltime.slurm
 
 When job, e.g., 62199204, finished, use `sacct`
 ```bash
-$ sacct  --cluster=wice  --jobs=62199204.batch  --format=jobid,maxrss
+$ sacct  --cluster=wice  --jobs=62199204.batch  --format=jobid,maxrss,maxvmsize
 ```
 
 . . .
